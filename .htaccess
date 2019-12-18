@@ -5,6 +5,7 @@
 
     RewriteEngine On
 
-    # Redirect All Requests To The Subfolder
-    RewriteRule ^ /public
+    # Redirect root to build
+    RewriteBase /
+    RewriteRule ^((?!public/).*?)/?$ public/$1 [L,NC]
 </IfModule>
