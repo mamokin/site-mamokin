@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import PageFooter from '../components/PageFooter';
 
 const IndexPage = () => (
+  <>
   <Layout>
     <section id="main">
       <Header />
@@ -13,6 +14,21 @@ const IndexPage = () => (
     </section>
     <PageFooter />
   </Layout>
+  <div class="area" >
+  <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div >
+  </>
 );
 
 export default IndexPage;
