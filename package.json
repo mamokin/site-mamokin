@@ -1,15 +1,18 @@
 {
-  "name": "gatsby-starter-identity",
+  "name": "mamokin",
   "version": "0.0.1",
-  "description": "Gatsby.js V2 starter template based on Identity by HTML5 UP",
+  "description": "Mamokin Identity [ Gatsby.js V2 starter template based on Identity by HTML5 UP ]",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anubhavsrivastava/gatsby-starter-identity.git"
+    "url": "git+https://github.com/mamokin/mamokin.git"
   },
   "author": {
     "name": "Anubhav Srivastava",
     "email": "anubhav.srivastava00@gmail.com"
   },
+  "contributors": [
+    "Michael Seaward <m.seaward@mamok.in> (mamok.in)"
+  ],
   "dependencies": {
     "gatsby": "^2.4.3",
     "gatsby-plugin-manifest": "^2.1.1",
@@ -42,7 +45,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/anubhavsrivastava/gatsby-starter-identity/issues"
+    "url": "https://github.com/mamokin/mamokin/issues"
   },
-  "homepage": "https://github.com/anubhavsrivastava/gatsby-starter-identity#readme"
+  "homepage": "https://github.com/mamokin/mamokin#readme"
 }
