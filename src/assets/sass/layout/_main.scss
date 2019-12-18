@@ -14,7 +14,7 @@
     ('opacity #{_duration(main)} ease', 'transform #{_duration(main)} ease')
   );
   @include padding(4.5em, 3em);
-  background: _palette(bg);
+  background: _palette(bg-transparent-dim);
   border-radius: _size(border-radius);
   cursor: default;
   max-width: 100%;
@@ -22,6 +22,26 @@
   position: relative;
   text-align: center;
   width: 27em;
+  transition: 1s;
+
+  & ul.icons li {
+    & a, & a:before {
+      transition: 1s;
+    }
+  }
+
+  &:hover {
+    background: _palette(bg-transparent-bright);
+
+    & ul.icons li a {
+      border: solid _size(border-width) _palette(border-dark);
+
+      &:before {
+        color: _palette(border-dark);
+      }
+    }
+  }
+
 
   .avatar {
     position: relative;
@@ -32,7 +52,7 @@
       display: block;
       margin: 0 auto;
       border-radius: 100%;
-      box-shadow: 0 0 0 1.5em _palette(bg);
+      // box-shadow: 0 0 0 1.5em _palette(bg);
     }
 
     &:before {

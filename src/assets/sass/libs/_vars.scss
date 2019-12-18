@@ -30,11 +30,15 @@
 	$palette: (
 		bg:					#ffffff,
 		bg-alt:				#e1dfe8,
+		bg-transparent-dim:     rgba(255, 255, 255, 0.1),
+		bg-transparent-bright:     rgba(255, 255, 255, 0.8),
 		fg:					#414f57,
 		fg-bold:			#313f47,
 		fg-light:			#616f77,
 		border:				#c8cccf,
+		border-dark:		#3b3b3b,
 		accent1:			#ffa596,
 		accent2:			#00e4ff,
-		highlight:			#ff7496
+		highlight:			#ff7496,
+		galaxy-purple:      #23172e
 	);
