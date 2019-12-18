@@ -7,7 +7,7 @@ module.exports = {
   manifestThemeColor: '#663399',
   manifestDisplay: 'standalone',
   manifestIcon: 'src/assets/img/Mamokin.png',
-  pathPrefix: `/gatsby-starter-identity/`, // This path is subpath of your hosting https://domain/portfolio
+  pathPrefix: ``, // This path is subpath of your hosting https://domain/portfolio
   authorName: 'Mamokin',
   heading: 'Web Developer',
   // social
