@@ -1,6 +1,6 @@
 module.exports = {
   siteTitle: 'Mamokin a.k.a Michael Seaward', // <title>
-  manifestName: 'Identity',
+  manifestName: 'Mamokin',
   manifestShortName: 'Landing', // max 12 characters
   manifestStartUrl: '/',
   manifestBackgroundColor: '#663399',
