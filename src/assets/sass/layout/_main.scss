@@ -22,11 +22,11 @@
   position: relative;
   text-align: center;
   width: 27em;
-  transition: 1s;
+  transition: background 1s;
 
   & ul.icons li {
     & a, & a:before {
-      transition: 1s;
+      transition: color 1s, border 1s;
     }
   }
 
