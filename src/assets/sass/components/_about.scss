@@ -1,0 +1,41 @@
+.about {
+  width: 70vw;
+  display: flex;
+  margin: 50px auto;
+  align-items: center;
+  align-content: center;
+  flex-flow: column;
+
+  &__cards {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+
+    .card {
+      width: 500px;
+      margin: 20px;
+    }
+  }
+
+  &__i-am {
+    margin: 20px;
+    text-shadow: 1px 1px 2px black; 
+
+    [class^='txt'] {
+      font-weight: 700;
+    }
+  }
+}
+
+.card {
+  width: 70%;
+  margin: 40px auto;
+  padding: 50px;
+  background: _palette(bg-alt);
+  border-radius: 12px;
+  flex-grow: 1;
+
+  h1,h2,h3 {
+    font-weight: 700;
+  }
+}

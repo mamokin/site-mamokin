@@ -69,10 +69,6 @@ html {
   }
 }
 
-.area {
-  margin-bottom: -20px;
-}
-
 .circles{
   position: absolute;
   top: 0;
@@ -176,7 +172,7 @@ html {
 
 .main-body {
   height: 100vh;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, _palette(orange), _palette(pink), _palette(blue), _palette(teal));
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
 
@@ -185,4 +181,26 @@ html {
       opacity: 1;
     }
   }
+}
+
+.txt {
+  &--o {
+    color: _palette(orange);
+  }
+
+  &--p {
+    color: _palette(pink);
+  }
+  
+  &--b {
+    color: _palette(blue);
+  }
+
+  &--t {
+    color: _palette(teal);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
