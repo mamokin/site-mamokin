@@ -34,7 +34,7 @@ const About = () => {
       <h3>Languages</h3>
       <p>HTML, JavaScript, TypeScript, CSS, Sass, Less</p>
       <h3>Favorite Frameworks & Libraries</h3>
-      <p>React, Vue, Material UI, Jekyll</p>
+      <p>React, Vue, Gatsby, Material UI, Jekyll</p>
       <h3>Tools</h3>
       <ul>
         <li>VS Code</li>
