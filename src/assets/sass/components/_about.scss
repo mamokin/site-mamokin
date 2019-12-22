@@ -1,6 +1,7 @@
 .about {
   width: 70vw;
   display: flex;
+  overflow: hidden;
   margin: 50px auto;
   align-items: center;
   align-content: center;
@@ -9,11 +10,14 @@
   &__cards {
     display: flex;
     flex-flow: row;
+    justify-content: space-around;
     width: 100%;
+    padding: 5px;
+    flex-wrap: wrap;
 
     .card {
       width: 500px;
-      margin: 20px;
+      margin: 5px;
     }
   }
 
