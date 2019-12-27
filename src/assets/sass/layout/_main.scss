@@ -22,7 +22,8 @@
     background: _palette(bg-transparent-dim);
     border-radius: _size(border-radius);
     cursor: default;
-    max-width: 100%;
+    max-width: 100vw;
+    min-width: 225px;
     opacity: 0.95;
     position: relative;
     text-align: center;

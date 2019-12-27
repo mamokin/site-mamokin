@@ -38,7 +38,7 @@ export default function Footer() {
       setWordClr(colors[getRandomInt(4)]);
     }, 1500);
     return () => clearInterval(interval);
-  }, [words, index]);
+  }, [words, colors, index]);
 
   return (
     <header>
@@ -46,7 +46,11 @@ export default function Footer() {
         <img height="128px" src={pic} alt="" />
       </span>
       <h1>{config.authorName}</h1>
-      <h3 className='about__i-am'><span className={`txt--${wordClr}`}>{word}</span></h3>
+      <h3 className='about__i-am'><span className={`txt--${wordClr}`}>
+        {
+          word === '' ? <br/> : word
+        }
+      </span></h3>
       <p>{config.heading}</p>
     </header>
   );
