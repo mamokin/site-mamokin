@@ -4,6 +4,23 @@ module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
     title: config.siteTitle,
+    menuLinks: [
+      {
+        name: 'home',
+        description: 'Homepage',
+        link: '/'
+      },
+      {
+        name: 'Apps',
+        description: 'Application Demos',
+        link: '/Apps'
+      },
+      {
+        name: 'Encoding',
+        description: 'Encoding Application',
+        link: '/Apps/Encoding'
+      }
+    ]
   },
   plugins: [
     'gatsby-plugin-react-helmet',

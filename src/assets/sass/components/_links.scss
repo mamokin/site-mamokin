@@ -1,0 +1,38 @@
+[class^='link'] {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.link {
+  &__card {
+    // @include vendor('transform-origin', '50% 50%');
+    // @include vendor('transform', 'rotateX(0deg)');
+    @include vendor('transition', ('opacity #{_duration(main)} ease', 'transform #{_duration(main)} ease'));
+    padding: 1%;
+    background: _palette(bg-transparent-dim);
+    border-radius: _size(border-radius);
+    transition: background 1s;
+
+    &:hover {
+      background: _palette(bg-transparent-bright);
+    }
+
+    &--b {
+      @extend .link__card;
+      @include pulseBorder;
+
+      padding: 5%;
+    }
+  }
+
+  &--txt {
+    text-shadow: 2px 2px pink;
+
+    &:hover {
+      cursor: pointer;
+      // color: orange;
+      font-weight: bolder;
+    }
+  }
+}

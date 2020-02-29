@@ -14,10 +14,7 @@
   #main {
     @include vendor('transform-origin', '50% 50%');
     @include vendor('transform', 'rotateX(0deg)');
-    @include vendor(
-      'transition',
-      ('opacity #{_duration(main)} ease', 'transform #{_duration(main)} ease')
-    );
+    @include vendor('transition', ('opacity #{_duration(main)} ease', 'transform #{_duration(main)} ease'));
     @include padding(4.5em, 3em);
     background: _palette(bg-transparent-dim);
     border-radius: _size(border-radius);
@@ -29,38 +26,38 @@
     text-align: center;
     width: 27em;
     transition: background 1s;
-  
+
     & ul.icons li {
-      & a, & a:before {
+      & a,
+      & a:before {
         transition: color 1s, border 1s;
       }
     }
-  
+
     &:hover {
       background: _palette(bg-transparent-bright);
-  
+
       & ul.icons li a {
         border: solid _size(border-width) _palette(border-dark);
-  
+
         &:before {
           color: _palette(border-dark);
         }
       }
     }
-  
-  
+
     .avatar {
       position: relative;
       display: block;
       margin-bottom: _size(element-margin);
-  
+
       img {
         display: block;
         margin: 0 auto;
         border-radius: 100%;
         // box-shadow: 0 0 0 1.5em _palette(bg);
       }
-  
+
       &:before {
         content: '';
         display: block;
@@ -73,11 +70,11 @@
         background: _palette(border);
       }
     }
-  
+
     @include breakpoint('<=xsmall') {
       @include padding(4em, 2em);
       width: 100%;
-  
+
       .avatar {
         &:before {
           left: -2em;
@@ -85,12 +82,12 @@
         }
       }
     }
-  
+
     body.is-preload & {
       @include vendor('transform', 'rotateX(15deg)');
       opacity: 0;
     }
-  
+
     .main-body.is-preload & {
       @include vendor('transform', 'rotateX(15deg)');
       opacity: 0;

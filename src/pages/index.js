@@ -7,20 +7,20 @@ import PageFooter from '../components/PageFooter';
 import AnimatedBg from '../components/AnimatedBg';
 import About from '../components/About';
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
   return (
     <>
-    <Layout>
-      <div className='social-card'>
-        <section id="main">
-          <Header />
-          <Footer />
-        </section>
-      </div>
-    </Layout>
-    <AnimatedBg/>
-    <About/>
-    <PageFooter />
+      <Layout>
+        <div className='social-card'>
+          <section id="main">
+            <Header />
+            <Footer />
+          </section>
+        </div>
+      </Layout>
+      <AnimatedBg />
+      <About />
+      <PageFooter />
     </>
   )
 };

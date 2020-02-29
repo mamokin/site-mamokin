@@ -33,16 +33,17 @@ class Layout extends Component {
             }
           }
         `}
-        render={data => (
-          <>
-            <Helmet
-              title={data.site.siteMetadata.title}
-              meta={[
-                { name: 'description', content: 'Web developer' },
-                { name: 'keywords', content: 'site, web, frontend developer, developer, gatsby, react' },
-              ]}
-            >
-              <script>{`
+        render={data => {
+          return (
+            <>
+              <Helmet
+                title={data.site.siteMetadata.title}
+                meta={[
+                  { name: 'description', content: 'Web developer' },
+                  { name: 'keywords', content: 'site, web, frontend developer, developer, gatsby, react' },
+                ]}
+              >
+                <script>{`
               "use strict";
 
               !function() {
@@ -68,12 +69,13 @@ class Layout extends Component {
               drift.SNIPPET_VERSION = '0.3.1';
               drift.load('r3zynyxtead4');
             `}</script>
-            </Helmet>
-            <div className={isPreloaded ? 'main-body is-preload' : 'main-body'}>
-              <div id="wrapper">{children}</div>
-            </div>
-          </>
-        )}
+              </Helmet>
+              <div className={isPreloaded ? 'main-body is-preload' : 'main-body'}>
+                <div className={this.props.compName} id="wrapper">{children}</div>
+              </div>
+            </>
+          )
+        }}
       />
     );
   }
@@ -81,6 +83,7 @@ class Layout extends Component {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  compName: PropTypes.string
 };
 
 export default Layout;

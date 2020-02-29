@@ -43,33 +43,49 @@ html {
   height: 100%;
 }
 
+@include keyframes(pulse) {
+  0% {
+    border: 1px solid transparent;
+  }
+
+  50% {
+    border: 1px solid orange;
+  }
+
+  100% {
+    border: 1px solid transparent;
+  }
+}
+
 @include keyframes(gradientBG) {
   0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @include keyframes(animate) {
-  0%{
+  0% {
     transform: translateY(0) rotate(0deg);
     opacity: 1;
     border-radius: 0;
   }
 
-  100%{
-      transform: translateY(-1000px) rotate(720deg);
-      opacity: 0;
-      border-radius: 50%;
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
   }
 }
 
-.circles{
+.circles {
   position: absolute;
   top: 0;
   left: 0;
@@ -165,13 +181,15 @@ html {
   }
 }
 
-*{
+* {
   margin: 0px;
   padding: 0px;
 }
 
 .main-body {
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
   background: linear-gradient(-45deg, _palette(orange), _palette(pink), _palette(blue), _palette(teal));
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
@@ -216,7 +234,7 @@ html {
   &--p {
     color: _palette(pink);
   }
-  
+
   &--b {
     color: _palette(blue);
   }

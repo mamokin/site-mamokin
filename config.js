@@ -1,5 +1,5 @@
 module.exports = {
-  siteTitle: 'Mamokin a.k.a Michael Seaward', // <title>
+  siteTitle: 'Mamokin', // <title>
   manifestName: 'Mamokin',
   manifestShortName: 'Landing', // max 12 characters
   manifestStartUrl: '/',

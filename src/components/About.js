@@ -7,7 +7,7 @@ const Card = props => {
 };
 
 const About = () => {
-  let content = {};  
+  let content = {};
 
   content.designer = (
     <>
@@ -39,7 +39,15 @@ const About = () => {
       <ul>
         <li>VS Code</li>
         <li>Atlassian</li>
-        <li>GitHub/GitLabs</li>
+        <li className='tooltip'>
+          <span className='txt'>GitHub/GitLab</span>
+          <span className='top'>
+            <a href='https://github.com/mseaward'>Work GitHub</a>
+            <a href='https://github.com/mamokin'>Personal GitHub</a>
+            <a href='https://gitlab.com/mamokin'>Gitlab</a>
+          </span>
+        </li>
+        <li>SonarCloud</li>
         <li>Codepen</li>
         <li>CodeSandbox</li>
         <li>Customized Terminal</li>

@@ -37,6 +37,7 @@
   "devDependencies": {
     "gh-pages": "^2.0.1",
     "prettier": "^1.17.0",
+    "react-hook-form": "^4.10.1",
     "rimraf": "^2.6.3"
   },
   "keywords": [

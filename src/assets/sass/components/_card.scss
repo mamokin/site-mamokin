@@ -1,0 +1,14 @@
+.card {
+  width: 70%;
+  margin: 40px auto;
+  padding: 50px;
+  background: _palette(bg-alt);
+  border-radius: 12px;
+  flex-grow: 1;
+
+  h1,
+  h2,
+  h3 {
+    font-weight: 700;
+  }
+}
