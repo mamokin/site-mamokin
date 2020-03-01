@@ -13,6 +13,7 @@
     background: _palette(bg-transparent-dim);
     border-radius: _size(border-radius);
     transition: background 1s;
+    max-width: 420px;
 
     &:hover {
       background: _palette(bg-transparent-bright);

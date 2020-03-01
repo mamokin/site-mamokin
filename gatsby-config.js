@@ -16,9 +16,19 @@ module.exports = {
         link: '/Apps'
       },
       {
-        name: 'Encoding',
+        name: 'Encode',
         description: 'Encoding Application',
-        link: '/Apps/Encoding'
+        link: '/Apps/Encode'
+      },
+      {
+        name: 'Decode',
+        description: 'Decoding Application',
+        link: '/Apps/Decode'
+      },
+      {
+        name: 'Encode & Decode',
+        description: 'Encoding & Decoding Application',
+        link: '/Apps/EncodeDecode'
       }
     ]
   },

@@ -11,10 +11,10 @@ const Apps = () => {
           className='link__card--b'
           role='link'
           tabIndex={0}
-          onClick={() => { navigate('/Apps/Encoding') }}
-          onKeyPress={() => { navigate('/Apps/Encoding') }}
+          onClick={() => { navigate('/Apps/EncodeDecode') }}
+          onKeyPress={() => { navigate('/Apps/EncodeDecode') }}
         >
-          Encoding
+          Encode & Decode
         </div>
       </Layout>
     </>

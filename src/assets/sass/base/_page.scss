@@ -190,7 +190,7 @@ html {
   height: 100%;
   min-height: 100vh;
   overflow: hidden;
-  background: linear-gradient(-45deg, _palette(orange), _palette(pink), _palette(blue), _palette(teal));
+  background: linear-gradient(-45deg, _palette(orng), _palette(pnk), _palette(bl), _palette(tl));
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
 
@@ -228,22 +228,31 @@ html {
 
 .txt {
   &--o {
-    color: _palette(orange);
+    color: _palette(orng);
   }
 
   &--p {
-    color: _palette(pink);
+    color: _palette(pnk);
   }
 
   &--b {
-    color: _palette(blue);
+    color: _palette(bl);
   }
 
   &--t {
-    color: _palette(teal);
+    color: _palette(tl);
   }
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+.d {
+  &--flex {
+    display: flex;
+  }
+  &--block {
+    display: block;
+  }
 }

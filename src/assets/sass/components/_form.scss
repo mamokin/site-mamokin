@@ -114,6 +114,12 @@ select {
   option {
     color: _palette(fg-bold);
     background: _palette(bg);
+
+    &:hover,
+    &:active,
+    &:-ms-keyboard-active {
+      background-color: _palette(orng) !important;
+    }
   }
 
   &:focus {
@@ -203,24 +209,4 @@ input[type='radio'] {
       border-radius: 100%;
     }
   }
-}
-
-::-webkit-input-placeholder {
-  color: _palette(fg-light) !important;
-  opacity: 1;
-}
-
-:-moz-placeholder {
-  color: _palette(fg-light) !important;
-  opacity: 1;
-}
-
-::-moz-placeholder {
-  color: _palette(fg-light) !important;
-  opacity: 1;
-}
-
-:-ms-input-placeholder {
-  color: _palette(fg-light) !important;
-  opacity: 1;
 }

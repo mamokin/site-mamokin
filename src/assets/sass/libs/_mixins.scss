@@ -65,3 +65,10 @@
 
   @return url('data:image/svg+xml;charset=utf8,#{$svg}');
 }
+
+// Declare as mixin because the style declarations cannot be grouped together.
+@mixin txt-placeholder-shadow() {
+  text-shadow: _palette(txt-shadow);
+  color: _palette(orng) !important;
+  opacity: 0.75;
+}
