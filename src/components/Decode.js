@@ -7,7 +7,7 @@ const Encoding = () => {
   const onSubmit = data => {
     if (data) {
       const oldLength = data.data.length;
-      const decoded = Buffer.from(data.data, data.encodingFormat).toString().replace('\"', '');
+      const decoded = Buffer.from(data.data, data.encodingFormat).toString().replace(/"/g, '');
       setResult({ txt: decoded, oldLength, newLength: decoded.length });
     }
   };
