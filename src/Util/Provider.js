@@ -27,6 +27,8 @@ class ThemeProvider extends React.Component {
       this.setState({ dark: lsDark })
     } else if (supportsDarkMode()) {
       this.setState({ dark: true })
+    } else { // If no lsDark for some reason, call again to save in localStorage
+      localStorage.setItem('dark', JSON.stringify(this.state.dark));
     }
   }
 
@@ -45,22 +47,3 @@ class ThemeProvider extends React.Component {
 export default ThemeContext;
 
 export { ThemeProvider };
-
-
-
-// const Provider = props => {
-//   const [isDark, setTheme] = useState(false);
-
-//   return (
-//     <themeContext.Provider value={{
-//       isDark,
-//       changeTheme: () => setTheme(!isDark)
-//     }}>
-//       {props.children}
-//     </themeContext.Provider>
-//   )
-// }
-
-// export default ({ element }) => (
-//   <Provider>{element}</Provider>
-// )
