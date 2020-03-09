@@ -72,8 +72,8 @@ const BackButton = () => {
     <>
       {shouldShowBack()
         ? <div className={`back-btn`}>
-          <button className={`btn__back`}>
-            <FontAwesomeIcon icon='arrow-left' size='2x' onClick={goBack} />
+          <button className={`btn__back`} onClick={goBack}>
+            <FontAwesomeIcon icon='arrow-left' size='2x' />
           </button>
         </div>
         : null}
