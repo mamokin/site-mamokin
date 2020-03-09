@@ -12,7 +12,7 @@
   // @include vendor('justify-content', 'space-between');
   @include vendor('flex-direction', 'column');
   @include vendor('perspective', '1000px');
-  overflow: inherit;
+  // overflow: inherit;
   max-height: 100%;
   position: relative;
   min-height: 100vh;

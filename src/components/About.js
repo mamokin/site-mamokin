@@ -57,14 +57,14 @@ const About = () => {
   );
 
   return (
-    <>
+    <div className='full-block bg'>
       <div className="about">
         <div className="about__cards">
           <Card children={content.designer} />
           <Card children={content.developer} />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

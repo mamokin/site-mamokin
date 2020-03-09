@@ -18,18 +18,18 @@ library.add(faMoon, faSun, faArrowLeft);
 
 export const wrapPageElement = ({ element, props }) => {
   return (
-    <>
-      <ThemeToggle />
+    <div>
       <BackButton />
-      <section id='smooth-scroll' className='scrollbar' data-sticky-container>
-        <SmoothScroll>
-          <Layout {...props}>{element}</Layout>
-        </SmoothScroll>
-      </section>
-    </>
+      <SmoothScroll>
+        <Layout {...props}>{element}</Layout>
+      </SmoothScroll>
+    </div>
   )
 }
 
 export const wrapRootElement = ({ element }) => (
-  <ThemeProvider>{element}</ThemeProvider>
+  <ThemeProvider>
+    <ThemeToggle />
+    {element}
+  </ThemeProvider>
 );
