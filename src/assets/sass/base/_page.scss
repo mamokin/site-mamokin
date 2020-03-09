@@ -112,6 +112,7 @@ html {
 .main-body {
   @include themify() {
     background: linear-gradient(-45deg, themed('lg1'), themed('lg2'), themed('lg3'), themed('lg4'));
+    background-size: 400% 400%;
   }
 
   height: 100%;
