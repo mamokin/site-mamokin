@@ -4,6 +4,9 @@
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
 
+@import '../palettes/dark';
+@import '../palettes/light';
+
 /* Button */
 
 input[type='submit'] {
@@ -69,6 +72,9 @@ button,
 }
 
 button {
+  color: _palette(stickyBtns);
+  border-color: _palette(stickyBtns);
+
   &:hover {
     border-color: _palette(highlight);
     color: _palette(highlight) !important;

@@ -70,17 +70,13 @@ const BackButton = () => {
 
   return (
     <>
-      <ThemeContext.Consumer>
-        {context => (
-          shouldShowBack()
-            ? <div className={`theme--${context.isDark ? 'dark' : 'light'} back-btn`}>
-              <button className={`btn__back`}>
-                <FontAwesomeIcon icon='arrow-left' size='2x' onClick={goBack} />
-              </button>
-            </div>
-            : null
-        )}
-      </ThemeContext.Consumer>
+      {shouldShowBack()
+        ? <div className={`back-btn`}>
+          <button className={`btn__back`}>
+            <FontAwesomeIcon icon='arrow-left' size='2x' onClick={goBack} />
+          </button>
+        </div>
+        : null}
     </>
   );
 }

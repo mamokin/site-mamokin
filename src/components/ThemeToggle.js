@@ -3,12 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ThemeContext from '../Util/Provider';
 
 const ThemeToggle = () => {
-  // const toggleTheme = (x) => x.changeTheme();
-
   return (
     <ThemeContext.Consumer>
       {theme => (
-        <div className={`theme--${theme.dark ? 'dark' : 'light'} theme-toggle`}>
+        <div className='theme-toggle'>
           <button onClick={theme.toggleDark} className='btn__theme-toggle'>
             <FontAwesomeIcon icon={theme.dark ? 'moon' : 'sun'} size='2x' />
           </button>
