@@ -1,0 +1,60 @@
+.encrypt {
+  margin: auto;
+
+  & * {
+    width: 100%;
+  }
+
+  ol li {
+    text-indent: 1em;
+    list-style-position: inside;
+  }
+
+  &__form {
+    margin-bottom: 2em;
+  }
+
+  &__result {
+    margin-bottom: 0;
+    .stdout {
+      @include themify() {
+        color: themed('fadedCardTxtHover');
+      }
+
+      &:nth-child(1) {
+        &::before {
+          content: 'Original: ';
+          font-weight: 700;
+        }
+      }
+
+      &:nth-child(2) {
+        &::before {
+          content: 'Encrypted: ';
+          font-weight: 700;
+        }
+      }
+
+      &:nth-child(3) {
+        &::before {
+          content: 'Decrypted: ';
+          font-weight: 700;
+        }
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__btn-submit {
+    margin-bottom: 10px;
+    height: 48px !important;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
+.EncryptDecrypt {
+  width: 70vw;
+}

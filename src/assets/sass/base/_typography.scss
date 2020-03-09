@@ -8,28 +8,32 @@
 // They MUST be separated to work 😢
 // Placeholder appearance
 ::-webkit-input-placeholder {
-  @include txt-placeholder-shadow();
+  @include txt-placeholder-shadow(_palette(orng));
 }
 
 :-moz-placeholder {
-  @include txt-placeholder-shadow();
+  @include txt-placeholder-shadow(_palette(orng));
 }
 
 ::-moz-placeholder {
-  @include txt-placeholder-shadow();
+  @include txt-placeholder-shadow(_palette(orng));
 }
 
 :-ms-input-placeholder {
-  @include txt-placeholder-shadow();
+  @include txt-placeholder-shadow(_palette(orng));
 }
 
 // Custom highlight color.
 *::selection {
-  background: _palette(orng) !important;
+  @include themify() {
+    background: themed('highlight') !important;
+  }
 }
 
 *::-moz-selection {
-  background: _palette(orng) !important;
+  @include themify() {
+    background: themed('highlight') !important;
+  }
 }
 
 body,
@@ -42,7 +46,7 @@ textarea {
   font-weight: _font(weight);
   line-height: 2;
   letter-spacing: _size(letter-spacing);
-  text-transform: uppercase;
+  text-transform: none;
 
   @include breakpoint('<=xlarge') {
     font-size: 11pt;
@@ -88,9 +92,14 @@ h3,
 h4,
 h5,
 h6 {
-  color: _palette(fg-bold);
+  @include txt-placeholder-shadow(white);
+  @include themify() {
+    color: themed('txtHead');
+  }
   line-height: 1.5;
   margin: 0 0 (_size(element-margin) * 0.5) 0;
+  font-weight: 500 !important;
+  margin-top: 1em !important;
 
   a {
     color: inherit;
@@ -124,6 +133,16 @@ h6 {
   font-size: 1em;
 }
 
+p,
+li,
+ol,
+.txt {
+  // don't add span, breaks about me card adjective cycle colors
+  @include themify() {
+    color: themed('txtAll');
+  }
+}
+
 @include breakpoint('<=xsmall') {
   h1 {
     font-size: 1.65em;
@@ -146,4 +165,22 @@ hr {
   border: 0;
   border-bottom: solid _size(border-width) _palette(border);
   margin: (_size(element-margin) * 2) 0;
+}
+
+.txt {
+  &--o {
+    color: _palette(orng);
+  }
+
+  &--p {
+    color: _palette(pnk);
+  }
+
+  &--b {
+    color: _palette(bl);
+  }
+
+  &--t {
+    color: _palette(tl);
+  }
 }

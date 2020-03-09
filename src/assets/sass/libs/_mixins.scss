@@ -67,8 +67,99 @@
 }
 
 // Declare as mixin because the style declarations cannot be grouped together.
-@mixin txt-placeholder-shadow() {
+@mixin txt-placeholder-shadow($color) {
   text-shadow: _palette(txt-shadow);
-  color: _palette(orng) !important;
+  // color: $color !important;
   opacity: 0.75;
+}
+
+// Implementation of themes
+@mixin themify() {
+  @each $theme, $map in $themes {
+    .theme--#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value
+          )
+        ) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+
+@mixin dimmedCard() {
+  @include vendor('transform-origin', '50% 50%');
+  @include vendor('transform', 'rotateX(0deg)');
+  @include vendor('transition', ('opacity #{_duration(main)} ease', 'transform #{_duration(main)} ease'));
+  @include padding(4.5em, 3em);
+  background: _palette(bg-transparent-dim);
+  border-radius: _size(border-radius);
+  cursor: default;
+  max-width: 100vw;
+  min-width: 225px;
+  opacity: 0.95;
+  position: relative;
+  text-align: center;
+  width: 27em;
+  transition: background 1s;
+
+  p,
+  h1 {
+    @include vendor('transition', ('color #{_duration(main)} ease'));
+    @include themify() {
+      color: themed('fadedCardTxt');
+    }
+  }
+
+  h1 {
+    text-shadow: none;
+    font-weight: 500;
+  }
+
+  & ul.icons li {
+    & a,
+    & a:before {
+      transition: color 1s, border 1s;
+    }
+  }
+
+  &:hover {
+    background: _palette(bg-transparent-bright);
+
+    p {
+      color: $onyx;
+    }
+
+    h1 {
+      @include themify() {
+        color: themed('fadedCardTxtHover');
+      }
+    }
+
+    & ul.icons li a {
+      border: solid _size(border-width) _palette(border-dark);
+
+      &:before {
+        color: _palette(border-dark);
+      }
+    }
+  }
+}
+
+@mixin transition($duration) {
+  -webkit-transition: $duration;
+  -moz-transition: $duration;
+  -ms-transition: $duration;
+  -o-transition: $duration;
+  transition: $duration;
 }

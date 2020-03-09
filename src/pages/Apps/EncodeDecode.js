@@ -1,13 +1,14 @@
 import React from 'react';
-import Layout from '../../components/Layout';
-import AnimatedBg from '../../components/AnimatedBg';
+
+// import AnimatedBg from '../../components/AnimatedBg';
 import Encode from '../../components/Encode'
 import Decode from '../../components/Decode'
 
 export default function EncodeDecode() {
   return (
-    <Layout compName='EncodeDecode'>
-      <AnimatedBg />
+    <div className='EncodeDecode'>
+      <h1>Encode and Decode</h1>
+      <p>This application performs basic encoding via <code>Buffer</code> data type conversions.</p>
       <div className='d--flex'>
         <div className='d--block'>
           <Encode />
@@ -16,6 +17,6 @@ export default function EncodeDecode() {
           <Decode />
         </div>
       </div>
-    </Layout>
+    </div>
   )
 }

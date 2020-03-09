@@ -56,33 +56,6 @@ label {
   font-weight: 200;
 }
 
-button[type='submit'],
-input[type='submit'] {
-  background: orange;
-  color: white;
-  text-transform: uppercase;
-  border: none;
-  margin-top: 40px;
-  // padding: 20px;
-  font-size: 16px;
-  font-weight: 100;
-  letter-spacing: 10px;
-}
-
-button[type='submit']:hover,
-input[type='submit']:hover {
-  background: #bf1650;
-}
-
-button[type='submit']:active,
-input[type='button']:active,
-input[type='submit']:active {
-  transition: 0.3s all;
-  transform: translateY(3px);
-  border: 1px solid transparent;
-  opacity: 0.8;
-}
-
 input:disabled {
   opacity: 0.4;
 }
@@ -121,7 +94,6 @@ button {
   display: block;
   appearance: none;
   margin-top: 40px;
-  border: 1px solid #333;
   margin-bottom: 20px;
   text-transform: uppercase;
   padding: 10px 20px;

@@ -2,7 +2,7 @@
   width: 70vw;
   display: flex;
   overflow: hidden;
-  margin: 50px auto;
+  margin: 40px auto;
   align-items: center;
   align-content: center;
   flex-flow: column;
@@ -17,8 +17,16 @@
     z-index: 5;
 
     .card {
-      width: 500px;
+      width: 600px;
       margin: 5px;
+      @include themify() {
+        background: themed('cardBg');
+        p,
+        li,
+        span {
+          color: themed('cardTxt');
+        }
+      }
     }
   }
 

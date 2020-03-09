@@ -70,7 +70,7 @@ const Header = ({ data }) => {
   }, [words, colors, index]);
 
   return (
-    <header>
+    <header className='header'>
       {links.map(link => link)}
       <span className="avatar">
         <img height="128px" src={pic} alt="" />

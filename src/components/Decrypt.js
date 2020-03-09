@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 
-const Encoding = () => {
+const Decrypt = () => {
   const [result, setResult] = useState({ txt: 'your decoded result will show here' });
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = data => {
@@ -15,7 +15,7 @@ const Encoding = () => {
 
   return (
     <>
-      <h2>Decode some stuff!</h2>
+      <h1>Decrypt some stuff!</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <textarea className={errors.data ? 'error' : ''} name="data" ref={register({ required: true, min: 1, maxLength: 20000 })} />
         <select className={errors.encodingFormat ? 'error' : ''} name="encodingFormat" ref={register({ required: true })}>
@@ -40,4 +40,4 @@ const Encoding = () => {
   );
 }
 
-export default Encoding;
+export default Decrypt;

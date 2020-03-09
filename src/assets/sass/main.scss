@@ -86,9 +86,16 @@
 @import 'components/links';
 @import 'components/hook-form'; // ensure this one comes lates as it over-rides some base form styles from gatsby for use in react-hook-forms
 @import 'components/card';
+@import 'components/encode-decode';
+@import 'components/encrypt';
 
 // Layout.
 
 @import 'layout/main';
 @import 'layout/footer';
 @import 'layout/wrapper';
+
+// Utility.
+
+@import 'util/syntaxHighlight';
+@import 'util/background';

@@ -4,4 +4,32 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-// You can delete this file if you're not using it
+import React from 'react';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faMoon, faSun, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import Layout from './src/components/Layout';
+import SmoothScroll from './src/Util/SmoothScroll';
+import Provider, { ThemeProvider } from './src/Util/Provider';
+import ThemeToggle from './src/components/ThemeToggle';
+import BackButton from './src/components/BackButton';
+
+// https://www.npmjs.com/package/@fortawesome/react-fontawesome
+library.add(faMoon, faSun, faArrowLeft);
+
+export const wrapPageElement = ({ element, props }) => {
+  return (
+    <>
+      <ThemeToggle />
+      <BackButton />
+      <section id='smooth-scroll' className='scrollbar' data-sticky-container>
+        <SmoothScroll>
+          <Layout {...props}>{element}</Layout>
+        </SmoothScroll>
+      </section>
+    </>
+  )
+}
+
+export const wrapRootElement = ({ element }) => (
+  <ThemeProvider>{element}</ThemeProvider>
+);

@@ -24,6 +24,7 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+  word-break: break-word;
 }
 
 body,
@@ -85,112 +86,37 @@ html {
   }
 }
 
-.circles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  margin-bottom: -20px;
-  overflow: hidden;
+.circles,
+.main-body,
+[class^='theme'] {
+  pointer-events: none;
+}
 
-  & li {
-    position: absolute;
-    display: block;
-    list-style: none;
-    width: 20px;
-    height: 20px;
-    background: rgba(255, 255, 255, 0.2);
-    animation: animate 25s linear infinite;
-    bottom: -150px;
-
-    &:nth-child(1) {
-      left: 25%;
-      width: 80px;
-      height: 80px;
-      animation-delay: 0s;
-    }
-
-    &:nth-child(2) {
-      left: 10%;
-      width: 20px;
-      height: 20px;
-      animation-delay: 2s;
-      animation-duration: 12s;
-    }
-
-    &:nth-child(3) {
-      left: 70%;
-      width: 20px;
-      height: 20px;
-      animation-delay: 4s;
-    }
-
-    &:nth-child(4) {
-      left: 40%;
-      width: 60px;
-      height: 60px;
-      animation-delay: 0s;
-      animation-duration: 18s;
-    }
-
-    &:nth-child(5) {
-      left: 65%;
-      width: 20px;
-      height: 20px;
-      animation-delay: 0s;
-    }
-
-    &:nth-child(6) {
-      left: 75%;
-      width: 110px;
-      height: 110px;
-      animation-delay: 3s;
-    }
-
-    &:nth-child(7) {
-      left: 35%;
-      width: 150px;
-      height: 150px;
-      animation-delay: 7s;
-    }
-
-    &:nth-child(8) {
-      left: 50%;
-      width: 25px;
-      height: 25px;
-      animation-delay: 15s;
-      animation-duration: 45s;
-    }
-
-    &:nth-child(9) {
-      left: 20%;
-      width: 15px;
-      height: 15px;
-      animation-delay: 2s;
-      animation-duration: 35s;
-    }
-
-    &:nth-child(10) {
-      left: 85%;
-      width: 150px;
-      height: 150px;
-      animation-delay: 0s;
-      animation-duration: 11s;
-    }
-  }
+.main-body,
+.theme-toggle,
+.back-btn {
+  pointer-events: auto;
 }
 
 * {
+  &:focus {
+    @include themify() {
+      outline-color: themed('focussed');
+    }
+  }
+
   margin: 0px;
   padding: 0px;
 }
 
 .main-body {
+  @include themify() {
+    background: linear-gradient(-45deg, themed('lg1'), themed('lg2'), themed('lg3'), themed('lg4'));
+  }
+
   height: 100%;
   min-height: 100vh;
-  overflow: hidden;
-  background: linear-gradient(-45deg, _palette(orng), _palette(pnk), _palette(bl), _palette(tl));
+  overflow: visible;
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
 
@@ -226,26 +152,9 @@ html {
   }
 }
 
-.txt {
-  &--o {
-    color: _palette(orng);
-  }
-
-  &--p {
-    color: _palette(pnk);
-  }
-
-  &--b {
-    color: _palette(bl);
-  }
-
-  &--t {
-    color: _palette(tl);
-  }
-}
-
 html {
   scroll-behavior: smooth;
+  overflow-y: hidden;
 }
 
 .d {
@@ -254,5 +163,30 @@ html {
   }
   &--block {
     display: block;
+    max-width: 50%;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.scroll-content {
+  height: 100vh;
+  width: 100vw;
+}
+
+.full-block {
+  position: relative;
+  width: 100vw;
+
+  &:not(:first-child) {
+    border-top: 20px solid violet;
+  }
+
+  &--landing {
+    @extend .full-block;
+    // Used on first full-block on a page to keep it's height to that of the viewport
+    height: 100vh;
   }
 }

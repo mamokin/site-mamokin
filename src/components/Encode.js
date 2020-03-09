@@ -7,7 +7,7 @@ const Encoding = () => {
   const onSubmit = data => {
     if (data) {
       const oldLength = data.data.length;
-      const encoded = Buffer.from(JSON.stringify(data.data)).toString(data.encodingFormat);
+      const encoded = Buffer.from(JSON.stringify(data.data)).toString(data.encodingFormat).replace(/"/g, '');
       setResult({ txt: encoded, oldLength, newLength: encoded.length });
     }
   };
@@ -15,7 +15,7 @@ const Encoding = () => {
 
   return (
     <>
-      <h1>Encode some stuff!</h1>
+      <h2>Encode some stuff!</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <textarea className={errors.data ? 'error' : ''} name="data" ref={register({ required: true, min: 1, maxLength: 20000 })} />
         <select className={errors.encodingFormat ? 'error' : ''} name="encodingFormat" ref={register({ required: true })}>

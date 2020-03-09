@@ -6,33 +6,35 @@
 
 .link {
   &__card {
-    // @include vendor('transform-origin', '50% 50%');
-    // @include vendor('transform', 'rotateX(0deg)');
-    @include vendor('transition', ('opacity #{_duration(main)} ease', 'transform #{_duration(main)} ease'));
+    @include dimmedCard();
     padding: 1%;
-    background: _palette(bg-transparent-dim);
-    border-radius: _size(border-radius);
-    transition: background 1s;
     max-width: 420px;
-
-    &:hover {
-      background: _palette(bg-transparent-bright);
-    }
 
     &--b {
       @extend .link__card;
       @include pulseBorder;
 
       padding: 5%;
+      margin: auto;
+      text-align: center;
+
+      p {
+        margin-bottom: 0;
+      }
     }
   }
 
   &--txt {
     text-shadow: 2px 2px pink;
+    display: block;
+    transform: translateY(-40px);
+
+    &:focus {
+      outline: transparent;
+    }
 
     &:hover {
       cursor: pointer;
-      // color: orange;
       font-weight: bolder;
     }
   }

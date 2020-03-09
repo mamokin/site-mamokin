@@ -8,7 +8,17 @@
 
 #footer {
   @include vendor('align-self', 'flex-end');
-  color: white;
+  &.page-footer {
+    @include themify() {
+      background: themed('cardBg');
+
+      .copyright * {
+        color: themed('footerTxt');
+      }
+    }
+    padding-bottom: 1em;
+    border-top: 5px solid violet;
+  }
   width: 100%;
   padding: _size(element-margin) 0 0 0;
   cursor: default;
