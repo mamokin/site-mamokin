@@ -183,4 +183,9 @@ hr {
   &--t {
     color: _palette(tl);
   }
+
+  &--center {
+    margin: auto;
+    text-align: center;
+  }
 }

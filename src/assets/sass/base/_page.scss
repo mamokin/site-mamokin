@@ -160,10 +160,12 @@ html {
 .d {
   &--flex {
     display: flex;
+    flex-grow: 1;
   }
   &--block {
     display: block;
-    max-width: 50%;
+    width: 100%;
+    max-width: 100%;
   }
 }
 

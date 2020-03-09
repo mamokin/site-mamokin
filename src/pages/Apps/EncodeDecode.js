@@ -8,7 +8,7 @@ export default function EncodeDecode() {
   return (
     <div className='EncodeDecode'>
       <h1>Encode and Decode</h1>
-      <p>This application performs basic encoding via <code>Buffer</code> data type conversions.</p>
+      <p className='txt--center'>This application performs basic encoding via <code>Buffer</code> data type conversions.</p>
       <div className='d--flex'>
         <div className='d--block'>
           <Encode />
