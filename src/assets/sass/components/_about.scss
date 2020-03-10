@@ -38,4 +38,33 @@
       font-weight: 700;
     }
   }
+
+  &__projects {
+    width: 100%;
+
+    h1 {
+      @include themify() {
+        color: themed('txtInvert');
+        text-shadow: none;
+        font-weight: 700 !important;
+      }
+    }
+
+    &.logos {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: auto;
+      justify-content: space-between;
+
+      .tooltip span.left {
+        width: 190px;
+        right: 100%;
+
+        @media (max-width: 564px) {
+          left: 100%;
+        }
+      }
+    }
+  }
 }

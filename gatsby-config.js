@@ -4,6 +4,10 @@ module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
     title: config.siteTitle,
+    author: config.authorName,
+    description: config.description,
+    image: config.image,
+    keyword: 'site, web, frontend developer, developer, gatsby, react',
     menuLinks: [
       {
         name: 'home',

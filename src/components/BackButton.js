@@ -1,7 +1,6 @@
 import React from 'react';
 import { navigate } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import ThemeContext from '../Util/Provider';
 
 const BackButton = () => {
   // routes look like '/Apps/EncodeDecode/'

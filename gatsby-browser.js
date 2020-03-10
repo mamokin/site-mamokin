@@ -9,7 +9,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faMoon, faSun, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import Layout from './src/components/Layout';
 import SmoothScroll from './src/Util/SmoothScroll';
-import Provider, { ThemeProvider } from './src/Util/Provider';
+import { ThemeProvider } from './src/Util/Provider';
 import ThemeToggle from './src/components/ThemeToggle';
 import BackButton from './src/components/BackButton';
 

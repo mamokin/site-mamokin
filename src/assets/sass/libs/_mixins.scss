@@ -69,7 +69,6 @@
 // Declare as mixin because the style declarations cannot be grouped together.
 @mixin txt-placeholder-shadow($color) {
   text-shadow: _palette(txt-shadow);
-  // color: $color !important;
   opacity: 0.75;
 }
 
