@@ -1,6 +1,10 @@
 module.exports = {
-  siteTitle: 'Mamokin a.k.a Michael Seaward', // <title>
-  manifestName: 'Identity',
+  siteTitle: 'Mamokin', // <title>
+  description: 'Full-stack Blockchain Developer. Demo applications, guides, portfolio, consultations.',
+  keywords: 'site, web, frontend developer, developer, gatsby, react',
+  image: '/Mamokin.png',
+  canonical: 'https://mamok.in/',
+  manifestName: 'Mamokin',
   manifestShortName: 'Landing', // max 12 characters
   manifestStartUrl: '/',
   manifestBackgroundColor: '#663399',
@@ -8,8 +12,8 @@ module.exports = {
   manifestDisplay: 'standalone',
   manifestIcon: 'src/assets/img/Mamokin.png',
   pathPrefix: ``, // This path is subpath of your hosting https://domain/portfolio
-  authorName: 'Mamokin',
-  heading: 'Web Developer',
+  authorName: 'Michael C. Seaward',
+  heading: 'Developer',
   // social
   socialLinks: [
     {

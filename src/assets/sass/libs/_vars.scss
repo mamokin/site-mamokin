@@ -1,44 +1,104 @@
+@import '../palettes/dark';
+@import '../palettes/light';
+@import '../palettes//typography';
+
 // Misc.
-	$misc: (
-		z-index-base:		10000
-	);
+$misc: (
+  z-index-base: 10000
+);
 
 // Duration.
-	$duration: (
-		transition:			0.2s,
-		bg:					1.75s,
-		main:				1s
-	);
+$duration: (
+  transition: 0.2s,
+  bg: 1.75s,
+  main: 1s
+);
 
 // Size.
-	$size: (
-		border-radius:		4px,
-		border-width:		1px,
-		element-height:		2.75em,
-		element-margin:		1.5em,
-		letter-spacing:		0.2em
-	);
+$size: (
+  border-radius: 4px,
+  border-width: 1px,
+  element-height: 2.75em,
+  element-margin: 1.5em,
+  letter-spacing: 0.2em
+);
 
 // Font.
-	$font: (
-		family:				('Source Sans Pro', Helvetica, sans-serif),
-		family-fixed:		('Courier New', monospace),
-		weight:				300
-	);
+$font: (
+  family: (
+    'Source Sans Pro',
+    Helvetica,
+    sans-serif
+  ),
+  family-fixed: (
+    'Courier New',
+    monospace
+  ),
+  weight: 300
+);
 
 // Palette.
-	$palette: (
-		bg:					#ffffff,
-		bg-alt:				#e1dfe8,
-		bg-transparent-dim:     rgba(255, 255, 255, 0.1),
-		bg-transparent-bright:     rgba(255, 255, 255, 0.8),
-		fg:					#414f57,
-		fg-bold:			#313f47,
-		fg-light:			#616f77,
-		border:				#c8cccf,
-		border-dark:		#3b3b3b,
-		accent1:			#ffa596,
-		accent2:			#00e4ff,
-		highlight:			#ff7496,
-		galaxy-purple:      #23172e
-	);
+$palette: (
+  bg: #ffffff,
+  white: bg,
+  bg-alt: #e1dfe8,
+  bg-transparent-dim: rgba(255, 255, 255, 0.1),
+  bg-transparent-bright: rgba(255, 255, 255, 0.8),
+  fg: #414f57,
+  fg-bold: #313f47,
+  fg-light: #616f77,
+  txt-shadow: 0 1px 8px rgba(0, 0, 0, 0.7),
+  border: #c8cccf,
+  border-dark: #3b3b3b,
+  accent1: #ffa596,
+  accent2: #00e4ff,
+  stickyBtns: $mauvelous-dark,
+  highlight: #ff7496,
+  galaxy-purple: #23172e,
+  orng: #fe8006,
+  pnk: #e73c7e,
+  bl: #23a6d5,
+  tl: #23d5ab,
+  warn: #ffcc00
+);
+
+$themes: (
+  dark: (
+    bg: $onyx,
+    cardBg: $white-smoke,
+    cardTxt: $black-olive,
+    fadedCardTxt: $white-smoke,
+    fadedCardTxtHover: $black-olive,
+    highlight: $mauvelous-dark,
+    border: $mauvelous-dark,
+    txtAll: $champagne-pink,
+    txtInvert: $white-smoke,
+    txtHead: $red-orange,
+    focussed: $champagne-pink,
+    lg1: $rebecca-purple,
+    lg2: $ksu-pruple,
+    lg3: $regalia,
+    lg4: $russian-violet,
+    lg5: $middle-red-purple,
+    footerTxt: $black-olive
+  ),
+  light: (
+    bg: $white-smoke,
+    cardBg: $onyx,
+    cardTxt: $champagne-pink,
+    fadedCardTxt: $white-smoke,
+    fadedCardTxtHover: $black-olive,
+    highlight: $mauvelous-dark,
+    border: $mauvelous-light,
+    focussed: $white-smoke,
+    txtAll: $white-smoke,
+    txtInvert: $onyx,
+    txtHead: $mauvelous-light,
+    lg1: $fuchsia,
+    lg2: $deep-lilac,
+    lg3: $purpeus,
+    lg4: $plum,
+    lg5: $platinate-purple,
+    footerTxt: $white-smoke
+  )
+);

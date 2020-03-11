@@ -1,0 +1,41 @@
+[class^='link'] {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.link {
+  &__card {
+    @include dimmedCard();
+    padding: 1%;
+    max-width: 420px;
+
+    &--b {
+      @extend .link__card;
+      @include pulseBorder;
+
+      padding: 5%;
+      margin: auto;
+      text-align: center;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &--txt {
+    text-shadow: 2px 2px pink;
+    display: block;
+    transform: translateY(-40px);
+
+    &:focus {
+      outline: transparent;
+    }
+
+    &:hover {
+      cursor: pointer;
+      font-weight: bolder;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+.about {
+  width: 70vw;
+  display: flex;
+  overflow: hidden;
+  margin: 40px auto;
+  align-items: center;
+  align-content: center;
+  flex-flow: column;
+
+  &__cards {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 5px;
+    flex-wrap: wrap;
+    z-index: 5;
+
+    .card {
+      width: 600px;
+      margin: 5px;
+      @include themify() {
+        background: themed('cardBg');
+        p,
+        li,
+        span {
+          color: themed('cardTxt');
+        }
+      }
+    }
+  }
+
+  &__i-am {
+    margin: 20px;
+    text-shadow: 1px 1px 2px black;
+
+    [class^='txt'] {
+      font-weight: 700;
+    }
+  }
+
+  &__projects {
+    width: 100%;
+
+    h1 {
+      @include themify() {
+        color: themed('txtInvert');
+        text-shadow: none;
+        font-weight: 700 !important;
+      }
+    }
+
+    &.logos {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: auto;
+      justify-content: space-between;
+
+      .tooltip span.left {
+        width: 190px;
+        right: 100%;
+
+        @media (max-width: 564px) {
+          left: 100%;
+        }
+      }
+    }
+  }
+}

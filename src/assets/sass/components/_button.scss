@@ -4,60 +4,101 @@
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
 
+@import '../palettes/dark';
+@import '../palettes/light';
+
 /* Button */
 
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"],
-	button,
-	.button {
-		@include vendor('appearance', 'none');
-		@include vendor('transition', (
-			'background-color #{_duration(transition)} ease-in-out',
-			'border-color #{_duration(transition)} ease-in-out',
-			'color #{_duration(transition)} ease-in-out'
-		));
-		display: inline-block;
-		height: _size(element-height);
-		line-height: _size(element-height);
-		padding: 0 1.5em;
-		background-color: transparent;
-		border-radius: _size(border-radius);
-		border: solid 1px _palette(border);
-		color: _palette(fg) !important;
-		cursor: pointer;
-		text-align: center;
-		text-decoration: none;
-		white-space: nowrap;
+input[type='submit'] {
+  @include themify() {
+    background: themed('lg5');
+  }
+}
 
-		&:hover {
-			border-color: _palette(highlight);
-			color: _palette(highlight) !important;
-		}
+input[type='submit'],
+input[type='reset'],
+input[type='button'],
+button,
+.button {
+  // @include vendor('appearance', 'none');
+  @include vendor(
+    'transition',
+    (
+      'background-color #{_duration(transition)} ease-in-out',
+      'border-color #{_duration(transition)} ease-in-out',
+      'color #{_duration(transition)} ease-in-out'
+    )
+  );
+  display: inline-block;
+  height: _size(element-height);
+  line-height: _size(element-height);
+  padding: 0 1.5em;
+  background-color: transparent;
+  border-radius: _size(border-radius);
+  @include themify() {
+    border: solid 1px themed('border');
+    color: themed('border') !important;
+  }
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
 
-		&.icon {
-			padding-left: 1.35em;
+  &.icon {
+    padding-left: 1.35em;
 
-			&:before {
-				margin-right: 0.5em;
-			}
-		}
+    &:before {
+      margin-right: 0.5em;
+    }
+  }
 
-		&.fit {
-			width: 100%;
-		}
+  &.fit {
+    width: 100%;
+  }
 
-		&.small {
-			font-size: 0.8em;
-		}
+  &.small {
+    font-size: 0.8em;
+  }
 
-		&.large {
-			font-size: 1.35em;
-		}
+  &.large {
+    font-size: 1.35em;
+  }
 
-		&.disabled,
-		&:disabled {
-			@include vendor('pointer-events', 'none');
-			opacity: 0.5;
-		}
-	}
+  &.disabled,
+  &:disabled {
+    @include vendor('pointer-events', 'none');
+    opacity: 0.5;
+  }
+}
+
+button {
+  color: _palette(stickyBtns);
+  border-color: _palette(stickyBtns);
+
+  &:hover {
+    border-color: _palette(highlight);
+    color: _palette(highlight) !important;
+  }
+}
+
+.btn {
+  &__theme-toggle,
+  &__back {
+    width: 37px;
+    height: 37px;
+    padding: 0.3em !important;
+    top: 0;
+    position: absolute;
+    z-index: 5;
+  }
+  &__theme-toggle {
+    pointer-events: all;
+    margin: 20px 20px 0 0;
+    right: 0;
+  }
+  &__back {
+    pointer-events: all;
+    margin: 20px 0 0 20px;
+    left: 0;
+  }
+}

@@ -1,0 +1,17 @@
+.EncodeDecode {
+  h1,
+  h2 {
+    text-align: center;
+  }
+
+  .card {
+    @include themify() {
+      background: themed('cardBg');
+      p,
+      li,
+      span {
+        color: themed('cardTxt');
+      }
+    }
+  }
+}
