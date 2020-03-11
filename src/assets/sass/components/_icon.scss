@@ -6,12 +6,12 @@
 
 /* Icon */
 
-	.icon {
-		@include icon;
-		position: relative;
-		border-bottom: none;
+.icon {
+  @include icon;
+  position: relative;
+  border-bottom: none;
 
-		> .label {
-			display: none;
-		}
-	}
+  > .label {
+    display: none;
+  }
+}

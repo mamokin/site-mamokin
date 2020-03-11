@@ -5,115 +5,187 @@
 ///
 
 /* Type */
+// They MUST be separated to work 😢
+// Placeholder appearance
+::-webkit-input-placeholder {
+  @include txt-placeholder-shadow(_palette(orng));
+}
 
-	body, input, select, textarea {
-		color: _palette(fg);
-		font-family: _font(family);
-		font-size: 14pt;
-		font-weight: _font(weight);
-		line-height: 2;
-		letter-spacing: _size(letter-spacing);
-		text-transform: uppercase;
+:-moz-placeholder {
+  @include txt-placeholder-shadow(_palette(orng));
+}
 
-		@include breakpoint('<=xlarge') {
-			font-size: 11pt;
-		}
+::-moz-placeholder {
+  @include txt-placeholder-shadow(_palette(orng));
+}
 
-		@include breakpoint('<=xsmall') {
-			font-size: 10pt;
-			line-height: 1.75;
-		}
-	}
+:-ms-input-placeholder {
+  @include txt-placeholder-shadow(_palette(orng));
+}
 
-	a {
-		@include vendor('transition', (
-			'color #{_duration(transition)} ease',
-			'border-color #{_duration(transition)} ease'
-		));
-		color: inherit;
-		text-decoration: none;
+// Custom highlight color.
+*::selection {
+  @include themify() {
+    background: themed('highlight') !important;
+  }
+}
 
-		&:before {
-			@include vendor('transition', (
-				'color #{_duration(transition)} ease',
-				'text-shadow #{_duration(transition)} ease'
-			));
-		}
+*::-moz-selection {
+  @include themify() {
+    background: themed('highlight') !important;
+  }
+}
 
-		&:hover {
-			color: _palette(highlight);
-		}
-	}
+body,
+input,
+select,
+textarea {
+  color: _palette(fg);
+  font-family: _font(family);
+  font-size: 14pt;
+  font-weight: _font(weight);
+  line-height: 2;
+  letter-spacing: _size(letter-spacing);
+  text-transform: none;
 
-	strong, b {
-		color: _palette(fg-bold);
-	}
+  @include breakpoint('<=xlarge') {
+    font-size: 11pt;
+  }
 
-	em, i {
-		font-style: italic;
-	}
+  @include breakpoint('<=xsmall') {
+    font-size: 10pt;
+    line-height: 1.75;
+  }
+}
 
-	p {
-		margin: 0 0 _size(element-margin) 0;
-	}
+a {
+  @include vendor('transition', ('color #{_duration(transition)} ease', 'border-color #{_duration(transition)} ease'));
+  color: inherit;
+  text-decoration: none;
 
-	h1, h2, h3, h4, h5, h6 {
-		color: _palette(fg-bold);
-		line-height: 1.5;
-		margin: 0 0 (_size(element-margin) * 0.5) 0;
+  &:before {
+    @include vendor('transition', ('color #{_duration(transition)} ease', 'text-shadow #{_duration(transition)} ease'));
+  }
 
-		a {
-			color: inherit;
-			text-decoration: none;
-		}
-	}
+  &:hover {
+    color: _palette(highlight);
+  }
+}
 
-	h1 {
-		font-size: 1.85em;
-		letter-spacing: (_size(letter-spacing) * 1.1);
-		margin: 0 0 (_size(element-margin) * 0.35) 0;
-	}
+strong,
+b {
+  color: _palette(fg-bold);
+}
 
-	h2 {
-		font-size: 1.25em;
-	}
+em,
+i {
+  font-style: italic;
+}
 
-	h3 {
-		font-size: 1em;
-	}
+p {
+  margin: 0 0 _size(element-margin) 0;
+}
 
-	h4 {
-		font-size: 1em;
-	}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include txt-placeholder-shadow(white);
+  @include themify() {
+    color: themed('txtHead');
+  }
+  line-height: 1.5;
+  margin: 0 0 (_size(element-margin) * 0.5) 0;
+  font-weight: 500 !important;
+  margin-top: 1em !important;
 
-	h5 {
-		font-size: 1em;
-	}
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
 
-	h6 {
-		font-size: 1em;
-	}
+h1 {
+  font-size: 1.85em;
+  letter-spacing: (_size(letter-spacing) * 1.1);
+  margin: 0 0 (_size(element-margin) * 0.35) 0;
+}
 
-	@include breakpoint('<=xsmall') {
-		h1 {
-			font-size: 1.65em;
-		}
-	}
+h2 {
+  font-size: 1.25em;
+}
 
-	sub {
-		font-size: 0.8em;
-		position: relative;
-		top: 0.5em;
-	}
+h3 {
+  font-size: 1em;
+}
 
-	sup {
-		font-size: 0.8em;
-		position: relative;
-		top: -0.5em;
-	}
+h4 {
+  font-size: 1em;
+}
 
-	hr {
-		border: 0;
-		border-bottom: solid _size(border-width) _palette(border);
-		margin: (_size(element-margin) * 2) 0;
-	}
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+p,
+li,
+ol,
+.txt {
+  // don't add span, breaks about me card adjective cycle colors
+  @include themify() {
+    color: themed('txtAll');
+  }
+}
+
+@include breakpoint('<=xsmall') {
+  h1 {
+    font-size: 1.65em;
+  }
+}
+
+sub {
+  font-size: 0.8em;
+  position: relative;
+  top: 0.5em;
+}
+
+sup {
+  font-size: 0.8em;
+  position: relative;
+  top: -0.5em;
+}
+
+hr {
+  border: 0;
+  border-bottom: solid _size(border-width) _palette(border);
+  margin: (_size(element-margin) * 2) 0;
+}
+
+.txt {
+  &--o {
+    color: _palette(orng);
+  }
+
+  &--p {
+    color: _palette(pnk);
+  }
+
+  &--b {
+    color: _palette(bl);
+  }
+
+  &--t {
+    color: _palette(tl);
+  }
+
+  &--center {
+    margin: auto;
+    text-align: center;
+  }
+}

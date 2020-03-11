@@ -1,0 +1,5 @@
+.bg {
+  @include themify() {
+    background: themed('bg');
+  }
+}
