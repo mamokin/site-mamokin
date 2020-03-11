@@ -1,78 +1,11 @@
-# mamok.in is based from a Gatsby starter site 😊
+# Mamok.in
 
-## gatsby-starter-identity
+Welcome to the open source code for https://mamok.in!
 
-Gatsby.js V2 starter template based on Identity by HTML5 UP
+This website is built using [Gatsby](https://www.gatsbyjs.com/)
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
+## Portfolio
 
-![Screenshot](./src/assets/img/identity.jpg)
+Over time, this website will change, grow, get facelifts, and likely be re-written. THe purpose to mamok.in is a single location to share my skillset, provide quick links to projects I have worked on, proof-of-concept [demo applications](https://github.com/mamokin/site-mamokin/tree/develop/src/pages/Apps), and social links. 
 
-Check online preview [here](https://anubhavsrivastava.github.io/gatsby-starter-identity/)
-
-### Screenshot
-
-![Screenshot](./src/assets/img/demo.png)
-
-### Install
-
-Make sure that you have the Gatsby CLI program installed:
-
-```sh
-npm install --global gatsby-cli
-```
-
-And run from your CLI:
-
-```sh
-gatsby new <site-name> https://github.com/anubhavsrivastava/gatsby-starter-identity
-```
-
-Then you can run it by:
-
-```sh
-cd gatsby-example-site
-npm install
-gatsby develop
-```
-
-#### Personalization
-
-Edit `config.js` to put up your details
-
-```javascript
-module.exports = {
-  siteTitle: 'Gatsby Starter Identity', // <title>
-  ...
-  authorName: 'Anubhav Srivastava',
-  heading: 'Web Developer',
-  // social
-  socialLinks: [
-    {
-      icon: 'fa-github',
-      name: 'Github',
-      url: 'https://github.com/anubhavsrivastava',
-    }
-    ...
-  ],
-};
-
-```
-
-#### Deploying using Github page
-
-`package.json` has a default script that uses `gh-pages` module to publish on Github pages. Simply running `npm run deploy` would publish the site on github pages.
-
-Additionally, it also has [path-prefix](https://www.gatsbyjs.org/docs/path-prefix/) value set for gatsby config in `config.js`. Change `pathPrefix` to relevant path if your gatsby site is hosted on subpath of a domain, `https://theanubhav.com/somePath/`. If you are hosting it as root site, i.e, `https://theanubhav.com/` , remove the pathPrefix configuration.
-
-#### Contribution
-
-Suggestions and PRs are welcome!
-
-Please create issue or open PR request for contribution.
-
-#### License
-
-[![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](LICENSE)
-
-refer `LICENSE` file in this repository.
+As the site grows, new features will be added but with caution, after all this is a portfolio site. For more socially engaging elements or for discussions, please reach out to me via the provided social media links or read some articles on my [blog (WIP)](https://blog.mamok.in/).
