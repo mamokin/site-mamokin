@@ -33,7 +33,10 @@ const About = () => {
   content.developer = (
     <>
       <h2>Frontend Developer</h2>
-      <p>I prefer coding things from scratch while making thoughts a reality in browsers.</p>
+      <p>
+        I prefer coding things from scratch while making thoughts a reality in
+        browsers.
+      </p>
       <h3>Languages</h3>
       <p>HTML, JavaScript, TypeScript, CSS, Sass, Less</p>
       <h3>Favorite Frameworks & Libraries</h3>
@@ -42,12 +45,12 @@ const About = () => {
       <ul>
         <li>VS Code</li>
         <li>Atlassian</li>
-        <li className='tooltip'>
-          <span className='txt'>GitHub/GitLab</span>
-          <span className='top'>
-            <a href='https://github.com/mseaward'>Work GitHub</a>
-            <a href='https://github.com/mamokin'>Personal GitHub</a>
-            <a href='https://gitlab.com/mamokin'>Gitlab</a>
+        <li className="tooltip">
+          <span className="txt">GitHub/GitLab</span>
+          <span className="top">
+            <a href="https://github.com/mseaward">Work GitHub</a>
+            <a href="https://github.com/mamokin">Personal GitHub</a>
+            <a href="https://gitlab.com/mamokin">Gitlab</a>
           </span>
         </li>
         <li>SonarCloud</li>
@@ -60,24 +63,40 @@ const About = () => {
   );
 
   return (
-    <div className='full-block bg'>
+    <div className="full-block bg">
       <div className="about">
         <div className="about__cards">
           <Card children={content.designer} />
           <Card children={content.developer} />
         </div>
-        <div className='about__projects'>
+        <div className="about__projects">
           <h1>Projects that I have worked on</h1>
-          <div className='about__projects logos'>
-            <a href='https://github.com/peerplays-network/peerplays-core-gui/releases/latest' alt='Peerplays Core GUI' target='_blank' tabIndex='0' >
-              <img src={wallet} alt='Peerplays Core GUI' />
+          <div className="about__projects logos">
+            <a
+              href="https://github.com/peerplays-network/peerplays-core-gui/releases/latest"
+              alt="Peerplays Core GUI"
+              target="_blank"
+              tabIndex="0"
+            >
+              <img src={wallet} alt="Peerplays Core GUI" />
             </a>
-            <a href='https://bookiepro.com/download' alt='Bookie Pro' target='_blank' tabIndex='0'>
-              <img src={bookie} alt='Bookie Pro' />
+            <a
+              href="https://bookiepro.com/download"
+              alt="Bookie Pro"
+              target="_blank"
+              tabIndex="0"
+            >
+              <img src={bookie} alt="Bookie Pro" />
             </a>
-            <a href='https://www.get-scatter.com/' alt='GetScatter' target='_blank' tabIndex='0' className='tooltip'>
-              <img src={scatter} alt='GetScatter' />
-              <span className='top left'>Peeprlays plugin</span>
+            <a
+              href="https://www.get-scatter.com/"
+              alt="GetScatter"
+              target="_blank"
+              tabIndex="0"
+              className="tooltip"
+            >
+              <img src={scatter} alt="GetScatter" />
+              <span className="top left">Peerplays plugin</span>
             </a>
           </div>
         </div>
