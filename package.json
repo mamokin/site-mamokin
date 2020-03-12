@@ -53,7 +53,7 @@
   "devDependencies": {
     "gh-pages": "^2.0.1",
     "prettier": "^1.17.0",
-    "react-hook-form": "^4.10.1",
+    "react-hook-form": "^5.0.3",
     "rimraf": "^2.6.3"
   },
   "keywords": [
