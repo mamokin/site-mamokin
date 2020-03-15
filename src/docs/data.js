@@ -18,7 +18,7 @@ export const encodingOptions = [
   { value: 'base64', label: 'base64', color: '#f74702' },
   { value: 'binary', label: 'binary', color: '#1f02f7' },
   { value: 'hex', label: 'hex', color: '#f702f3' }
-]
+];
 
 export const flavourOptions = [
   { value: 'vanilla', label: 'Vanilla', rating: 'safe' },
@@ -99,7 +99,7 @@ export const optionLength = [
   {
     value: 3,
     label:
-      "It is now an easy matter to spell out the ethic of a truth: 'Do all that you can to persevere in that which exceeds your perseverance. Persevere in the interruption. Seize in your being that which has seized and broken you.",
+      'It is now an easy matter to spell out the ethic of a truth: \'Do all that you can to persevere in that which exceeds your perseverance. Persevere in the interruption. Seize in your being that which has seized and broken you.',
   },
 ];
 

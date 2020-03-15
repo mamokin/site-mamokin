@@ -12,7 +12,7 @@ export const generateKeyPair = () => {
   publicKey = encodeBase64(publicKey);
   secretKey = encodeBase64(secretKey);
   return { publicKey, secretKey };
-}
+};
 
 export const encrypt = (
   secretOrSharedKey,
@@ -59,7 +59,7 @@ export const decrypt = (
 
 export const getShared = (pub, priv) => {
   return box.before(decodeBase64(pub), decodeBase64(priv));
-}
+};
 
 
 /*

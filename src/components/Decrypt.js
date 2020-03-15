@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useForm } from "react-hook-form";
+import { useForm } from 'react-hook-form';
 
 const Decrypt = () => {
   const [result, setResult] = useState({ txt: 'your decoded result will show here' });
@@ -7,6 +7,7 @@ const Decrypt = () => {
   const onSubmit = data => {
     if (data) {
       const oldLength = data.data.length;
+      // eslint-disable-next-line no-undef
       const decoded = Buffer.from(data.data, data.encodingFormat).toString().replace(/"/g, '');
       setResult({ txt: decoded, oldLength, newLength: decoded.length });
     }
@@ -38,6 +39,6 @@ const Decrypt = () => {
       </div>
     </>
   );
-}
+};
 
 export default Decrypt;

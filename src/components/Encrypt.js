@@ -1,6 +1,7 @@
+/* eslint-disable react/no-unescaped-entities */
 import React, { useState } from 'react';
-import { useForm } from "react-hook-form";
-import Account from '../services/Account'
+import { useForm } from 'react-hook-form';
+import Account from '../services/Account';
 import { CodeHighlight } from '../components/Highlighter';
 import { encrypt, getShared, decrypt } from '../services/KeyPair';
 
@@ -19,19 +20,19 @@ const Encrypt = () => {
   const defaultValues = {
     msg: '',
     btn1Txt: ''
-  }
+  };
 
   const { register, handleSubmit, setValue, reset, watch, errors } = useForm({ defaultValues });
   const msgValue = watch('msgValue');
   const handleChange = e => {
     setValue('msgValue', e.target.value, true);
-  }
+  };
 
   const genAccounts = () => {
     setAccA(Account.fromData({ username: accA.name }));
     setAccB(Account.fromData({ username: accB.name }));
     setHideA(false); setHideB(false);
-  }
+  };
   const encryption = () => {
     let arr = msg;
     const sharedA = getShared(accB.security.publicKey, accA.security.privateKey);
@@ -39,14 +40,14 @@ const Encrypt = () => {
     setEncrypted(enc);
     arr.push(enc);
     setMsg(arr);
-  }
+  };
   const decryption = () => {
     let arr = msg;
     const sharedB = getShared(accA.security.publicKey, accB.security.privateKey);
     const dec = decrypt(sharedB, encrypted);
     arr.push(dec);
     setMsg(arr);
-  }
+  };
 
   function nextStep(input) {
     switch (step) {
@@ -54,18 +55,18 @@ const Encrypt = () => {
         genAccounts();
         setMsg([input.msg]);
         setShowResult(true);
-        setbtn1Txt('Encrypt Message')
-        setStep(step + 1)
+        setbtn1Txt('Encrypt Message');
+        setStep(step + 1);
         break;
       case 2:
         encryption();
-        setbtn1Txt('Decrypt Message')
-        setStep(step + 1)
+        setbtn1Txt('Decrypt Message');
+        setStep(step + 1);
         break;
       case 3:
         decryption();
         setbtn1Txt('Restart');
-        setStep(step + 1)
+        setStep(step + 1);
         break;
       case 4:
         reset({ defaultValues });
@@ -137,6 +138,6 @@ const Encrypt = () => {
       </form>
     </div>
   );
-}
+};
 
 export default Encrypt;

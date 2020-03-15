@@ -1,9 +1,10 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const defaultState = {
   dark: false,
   toggleDark: () => { }
-}
+};
 
 const ThemeContext = React.createContext(defaultState);
 
@@ -15,14 +16,14 @@ class ThemeProvider extends React.Component {
   state = { dark: false }
 
   toggleDark = () => {
-    let dark = !this.state.dark
+    let dark = !this.state.dark;
     localStorage.setItem('dark', JSON.stringify(dark));
-    this.setState({ dark })
+    this.setState({ dark });
   }
 
   componentDidMount() {
     // Getting dark mode value from localStorage!
-    const lsDark = JSON.parse(localStorage.getItem('dark'))
+    const lsDark = JSON.parse(localStorage.getItem('dark'));
 
     if (!lsDark) {
       // If no lsDark, re-save in localStorage
@@ -31,7 +32,7 @@ class ThemeProvider extends React.Component {
 
     // OS native checks and component startup
     if (lsDark) {
-      this.setState({ dark: lsDark })
+      this.setState({ dark: lsDark });
     }
   }
 
@@ -43,9 +44,13 @@ class ThemeProvider extends React.Component {
       <ThemeContext.Provider value={{ dark, toggleDark: this.toggleDark }}>
         {children}
       </ThemeContext.Provider>
-    )
+    );
   }
 }
+
+ThemeProvider.propTypes = {
+  children: PropTypes.any
+};
 
 export default ThemeContext;
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useForm } from "react-hook-form";
+import { useForm } from 'react-hook-form';
 
 const Encoding = () => {
   const [result, setResult] = useState({ txt: 'your encoded result will show here' });
@@ -7,6 +7,7 @@ const Encoding = () => {
   const onSubmit = data => {
     if (data) {
       const oldLength = data.data.length;
+      // eslint-disable-next-line no-undef
       const encoded = Buffer.from(JSON.stringify(data.data)).toString(data.encodingFormat).replace(/"/g, '');
       setResult({ txt: encoded, oldLength, newLength: encoded.length });
     }
@@ -38,6 +39,6 @@ const Encoding = () => {
       </div>
     </>
   );
-}
+};
 
 export default Encoding;

@@ -5,6 +5,7 @@ import se from '../assets/img/logo_se--stacked.png';
 import scatter from '../assets/img/logo_scatter.png';
 
 const Card = props => {
+  // eslint-disable-next-line react/prop-types
   const { mod, children } = props;
 
   return <div className={`card${mod ? '--' + mod : ''}`}>{children}</div>;
@@ -67,7 +68,9 @@ const About = () => {
     <div className="full-block bg">
       <div className="about">
         <div className="about__cards">
+          {/* eslint-disable-next-line react/no-children-prop */}
           <Card children={content.designer} />
+          {/* eslint-disable-next-line react/no-children-prop */}
           <Card children={content.developer} />
         </div>
         <div className="about__projects">

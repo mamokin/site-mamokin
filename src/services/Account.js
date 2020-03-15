@@ -1,6 +1,6 @@
 import { randomBytes } from 'crypto';
 import { generateKeyPair } from './KeyPair';
-import { Chance } from 'chance'
+import { Chance } from 'chance';
 const chance = new Chance();
 class DataHelper {
   static newId() {
@@ -30,7 +30,7 @@ export default class Account {
           */
         }
       }
-    }
+    };
 
     return new Account(data);
   }
@@ -54,7 +54,7 @@ export default class Account {
           */
         }
       }
-    }
+    };
 
     return new Account(data);
   }
