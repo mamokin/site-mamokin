@@ -9,7 +9,7 @@ const IndexPage = () => {
       <SocialCard />
       <About />
     </>
-  )
+  );
 };
 
 export default IndexPage;

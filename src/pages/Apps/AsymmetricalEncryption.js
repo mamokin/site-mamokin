@@ -1,5 +1,5 @@
 import React from 'react';
-import Encrypt from '../../components/Encrypt'
+import Encrypt from '../../components/Encrypt';
 
 export default function EncryptDecrypt() {
   return (
@@ -8,5 +8,5 @@ export default function EncryptDecrypt() {
       <p className='card--warning'>The keys created are not encrypted or stored anywhere.</p>
       <Encrypt />
     </div>
-  )
+  );
 }

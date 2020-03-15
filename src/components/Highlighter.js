@@ -18,6 +18,7 @@ export class CodeHighlight extends Component {
     const { language } = this.props;
     if (language && !registeredLanguages[language]) {
       try {
+        // eslint-disable-next-line no-undef
         const newLanguage = require(`highlight.js/lib/languages/${language}`);
         hljs.registerLanguage(language, newLanguage);
         registeredLanguages[language] = true;
@@ -61,6 +62,7 @@ export class CodeHighlight extends Component {
 CodeHighlight.propTypes = {
   children: PropTypes.node.isRequired,
   language: PropTypes.string,
+  hidden: PropTypes.bool
 };
 // optionally set the language you think will use most as a default value
 // if you don't set this, I would encourage to make language prop required, 

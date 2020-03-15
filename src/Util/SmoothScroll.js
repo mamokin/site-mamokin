@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 import SmoothScrollbar from 'smooth-scrollbar';
@@ -53,7 +54,7 @@ export default class SmoothScroll extends React.Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     Object.keys(nextProps).forEach((key) => {
       if (!(key in this.scrollbar.options)) {
         return;
@@ -89,7 +90,6 @@ export default class SmoothScroll extends React.Component {
       continuousScrolling,
       wheelEventTarget,
       plugins,
-
       onScroll,
       children,
       ...others
