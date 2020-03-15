@@ -4,6 +4,37 @@ module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
     title: config.siteTitle,
+    author: config.authorName,
+    description: config.description,
+    image: config.image,
+    keyword: 'site, web, frontend developer, developer, gatsby, react',
+    menuLinks: [
+      {
+        name: 'home',
+        description: 'Homepage',
+        link: '/'
+      },
+      {
+        name: 'Apps',
+        description: 'Application Demos',
+        link: '/Apps'
+      },
+      {
+        name: 'Encode',
+        description: 'Encoding Application',
+        link: '/Apps/Encode'
+      },
+      {
+        name: 'Decode',
+        description: 'Decoding Application',
+        link: '/Apps/Decode'
+      },
+      {
+        name: 'Encode & Decode',
+        description: 'Encoding & Decoding Application',
+        link: '/Apps/EncodeDecode'
+      }
+    ]
   },
   plugins: [
     'gatsby-plugin-react-helmet',
