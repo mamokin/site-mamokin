@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+> Do not squash merge unless absolutely necessary
+
 ## [0.5.0](https://github.com/mamokin/mamokin/compare/v0.0.3...v0.5.0) (2020-03-15)
 
 
