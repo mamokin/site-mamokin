@@ -12,15 +12,16 @@
 
 /* Basic */
 
-	body {
-		&:after {
-			display: none;
-		}
-	}
+body {
+  &::after {
+    display: none;
+  }
+}
 
 /* Main */
 
-	#main {
-		@include vendor('transform', 'none !important');
-		opacity: 1 !important;
-	}
+#main {
+  @include vendor('transform', 'none !important');
+
+  opacity: 1 !important; /* stylelint-disable-line declaration-no-important */
+}

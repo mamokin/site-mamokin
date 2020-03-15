@@ -6,55 +6,57 @@
 
 /* Icons */
 
-	ul.icons {
-		cursor: default;
-		list-style: none;
-		padding-left: 0;
-		margin-top: -0.675em;
+ul.icons {
+  /* stylelint-disable-next-line declaration-property-unit-whitelist */
+  margin-top: -0.675em;
+  padding-left: 0;
+  list-style: none;
+  cursor: default;
 
-		li {
-			display: inline-block;
-			padding: 0.675em 0.5em;
+  li {
+    display: inline-block;
+    padding: 0.675em 0.5em;
 
-			a {
-				@include icon-alt(false, true);
-				position: relative;
-				display: block;
-				width: 3.75em;
-				height: 3.75em;
-				border-radius: 100%;
-				border: solid _size(border-width) _palette(border);
-				line-height: 3.75em;
-				overflow: hidden;
-				text-align: center;
-				text-indent: 3.75em;
-				white-space: nowrap;
+    a {
+      @include icon-alt(false, true);
 
-				&:before {
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: inherit;
-					height: inherit;
-					font-size: 1.85rem;
-					line-height: inherit;
-					text-align: center;
-					text-indent: 0;
-				}
+      display: block;
+      position: relative;
+      width: 3.75em;
+      height: 3.75em; /* stylelint-disable-line declaration-property-unit-whitelist */
+      border: solid _size(border-width) _palette(border);
+      border-radius: 100%;
+      line-height: 3.75em; /* stylelint-disable-line declaration-property-unit-whitelist */
+      text-align: center;
+      overflow: hidden;
+      text-indent: 3.75em;
+      white-space: nowrap;
 
-				&:hover {
-					border-color: _palette(highlight);
-				}
-			}
-		}
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: inherit;
+        height: inherit;
+        line-height: inherit;
+        font-size: 1.85rem; /* stylelint-disable-line declaration-property-unit-whitelist */
+        text-align: center;
+        text-indent: 0;
+      }
 
-		@include breakpoint('<=xsmall') {
-			li {
-				a {
-					&:before {
-						font-size: 1.5rem;
-					}
-				}
-			}
-		}
-	}
+      &:hover {
+        border-color: _palette(highlight);
+      }
+    }
+  }
+
+  @include breakpoint('<=xsmall') {
+    li {
+      a {
+        &::before {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

@@ -14,26 +14,25 @@
   }
 
   .top {
+    display: none;
     /* Position the tooltip */
     position: absolute;
     bottom: 100%;
-    max-width: 600px;
-    max-height: 300px;
-    overflow: auto;
-
-    position: absolute;
-    padding: 10px 20px;
-    background-color: black;
-    font-size: 0.7em;
-    border-radius: 5px;
     z-index: 99999999;
     box-sizing: border-box;
+    max-width: 600px;
+    max-height: 300px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 0.7em;
+    background-color: black;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
-    display: none;
+    overflow: auto;
 
     a {
       @include themify() {
         color: themed('txtAll');
+
         &:hover {
           color: themed('highlight');
         }
@@ -44,10 +43,10 @@
       &::after {
         content: '';
         position: absolute;
-        width: 15px;
-        height: 15px;
         left: 50%;
         transform: translate(-50%, -50%) rotate(45deg);
+        width: 15px;
+        height: 15px;
         background-color: black;
         box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
       }
@@ -55,9 +54,9 @@
       position: absolute;
       top: 100%;
       left: 30%;
-      margin-left: -15px;
       width: 30px;
       height: 15px;
+      margin-left: -15px;
       overflow: hidden;
     }
   }
