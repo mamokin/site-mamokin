@@ -8,6 +8,7 @@
 
 #footer {
   @include vendor('align-self', 'flex-end');
+
   &.page-footer {
     @include themify() {
       background: themed('cardBg');
@@ -16,13 +17,15 @@
         color: themed('footerTxt');
       }
     }
+
     padding-bottom: 1em;
     border-top: 5px solid violet;
   }
+
   width: 100%;
   padding: _size(element-margin) 0 0 0;
-  cursor: default;
   text-align: center;
+  cursor: default;
 
   .copyright {
     margin: 0;
@@ -32,14 +35,7 @@
 
     li {
       display: inline-block;
-      margin: 0 0 0 (0.85em - (_size(letter-spacing) * 2));
-      padding: 0 0 0 0.85em;
-      border-left: solid _size(border-width) rgba(19, 19, 19, 0.5);
       line-height: 1;
-
-      &:first-child {
-        border-left: 0;
-      }
     }
   }
 }

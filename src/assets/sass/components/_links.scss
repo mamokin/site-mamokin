@@ -7,15 +7,16 @@
 .link {
   &__card {
     @include dimmedCard();
-    padding: 1%;
+
     max-width: 420px;
+    padding: 1%;
 
     &--b {
       @extend .link__card;
       @include pulseBorder;
 
-      padding: 5%;
       margin: auto;
+      padding: 5%;
       text-align: center;
 
       p {
@@ -25,17 +26,17 @@
   }
 
   &--txt {
-    text-shadow: 2px 2px pink;
     display: block;
     transform: translateY(-40px);
+    text-shadow: 2px 2px pink;
 
     &:focus {
       outline: transparent;
     }
 
     &:hover {
+      font-weight: 800;
       cursor: pointer;
-      font-weight: bolder;
     }
   }
 }

@@ -1,12 +1,12 @@
 $scrollbar-gradient: linear-gradient(45deg, #00aeff, #a68eff);
 
 ::-webkit-scrollbar-thumb {
-  background-image: $scrollbar-gradient;
-  border-radius: 10px;
   -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-image: $scrollbar-gradient;
   -webkit-box-shadow: rgba(0, 0, 0, 0.12) 0 3px 13px 1px;
-  box-shadow: rgba(0, 0, 0, 0.12) 0 3px 13px 1px;
   -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 1);
+  box-shadow: rgba(0, 0, 0, 0.12) 0 3px 13px 1px;
 }
 
 ::-webkit-scrollbar {
@@ -24,8 +24,8 @@ $scrollbar-gradient: linear-gradient(45deg, #00aeff, #a68eff);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #a68eff;
   border-radius: 6px;
+  background-color: #a68eff;
   // border: 3px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -33,7 +33,7 @@ $scrollbar-gradient: linear-gradient(45deg, #00aeff, #a68eff);
 ::-webkit-scrollbar,
 ::-webkit-scrollbar-track,
 ::-webkit-scrollbar-thumb {
-  &:window-inactive {
+  &:window-inactive { /* stylelint-disable-line */
     background-image: red;
     // background: transparentize($color: #000000, $amount: 0);
   }
