@@ -1,6 +1,6 @@
 import React from 'react';
 import { navigate } from 'gatsby';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const BackButton = () => {
   // routes look like '/Apps/EncodeDecode/'
@@ -15,7 +15,7 @@ const BackButton = () => {
     }
 
     return parts;
-  }
+  };
 
   const getLast = (prts) => {
     let last = '/';
@@ -32,7 +32,7 @@ const BackButton = () => {
     }
 
     return last;
-  }
+  };
 
   const getCurrent = (prts) => {
     let current = '/';
@@ -41,18 +41,18 @@ const BackButton = () => {
     }
 
     if (prts) {
-      const thisRoute = prts[prts.length - 1]
+      const thisRoute = prts[prts.length - 1];
       if (thisRoute) {
         current = thisRoute;
       }
     }
 
     return current;
-  }
+  };
 
   const goBack = () => {
     navigate(getLast());
-  }
+  };
 
   const shouldShowBack = () => {
     let allowReturn = false;
@@ -65,19 +65,19 @@ const BackButton = () => {
     }
 
     return allowReturn;
-  }
+  };
 
   return (
     <>
       {shouldShowBack()
-        ? <div className={`back-btn`}>
-          <button className={`btn__back`} onClick={goBack}>
+        ? <div className={'back-btn'}>
+          <button className={'btn__back'} onClick={goBack}>
             <FontAwesomeIcon icon='arrow-left' size='2x' />
           </button>
         </div>
         : null}
     </>
   );
-}
+};
 
 export default BackButton;

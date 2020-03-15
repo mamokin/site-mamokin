@@ -13,18 +13,21 @@ module.exports = {
     },
     'parserOptions': {
         'ecmaFeatures': {
-            'jsx': true
+            'jsx': true,
+            "legacyDecorators": true
         },
-        'ecmaVersion': 2018,
+        'ecmaVersion': 2020,
         'sourceType': 'module'
     },
+    "parser": "babel-eslint",
     'plugins': [
         'react'
     ],
     'rules': {
         'indent': [
             'error',
-            4
+            2,
+            { "SwitchCase": 1 }
         ],
         'linebreak-style': [
             'error',

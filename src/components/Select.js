@@ -1,17 +1,17 @@
-import React from "react";
-import chroma from 'chroma-js'
-import Select from "react-select";
-import { colourOptions } from "../docs/data";
+import React from 'react';
+import chroma from 'chroma-js';
+import Select from 'react-select';
+import { colourOptions } from '../docs/data';
 
-const dot = (color = "#ccc") => ({
-  alignItems: "center",
-  display: "flex",
+const dot = (color = '#ccc') => ({
+  alignItems: 'center',
+  display: 'flex',
 
-  ":before": {
+  ':before': {
     backgroundColor: color,
     borderRadius: 10,
     content: '" "',
-    display: "block",
+    display: 'block',
     marginRight: 8,
     height: 10,
     width: 10
@@ -19,7 +19,7 @@ const dot = (color = "#ccc") => ({
 });
 
 const colourStyles = {
-  control: styles => ({ ...styles, backgroundColor: "white" }),
+  control: styles => ({ ...styles, backgroundColor: 'white' }),
   option: (styles, { data, isDisabled, isFocused, isSelected }) => {
     const color = chroma(data.color);
     return {
@@ -32,16 +32,16 @@ const colourStyles = {
             ? color.alpha(0.1).css()
             : null,
       color: isDisabled
-        ? "#ccc"
+        ? '#ccc'
         : isSelected
-          ? chroma.contrast(color, "white") > 2
-            ? "white"
-            : "black"
+          ? chroma.contrast(color, 'white') > 2
+            ? 'white'
+            : 'black'
           : data.color,
-      cursor: isDisabled ? "not-allowed" : "default",
+      cursor: isDisabled ? 'not-allowed' : 'default',
 
-      ":active": {
-        ...styles[":active"],
+      ':active': {
+        ...styles[':active'],
         backgroundColor:
           !isDisabled && (isSelected ? data.color : color.alpha(0.3).css())
       }
@@ -52,7 +52,7 @@ const colourStyles = {
   singleValue: (styles, { data }) => ({ ...styles, ...dot(data.color) })
 };
 
-export default () => (
+const select = () => (
   <Select
     defaultValue={colourOptions[2]}
     label="Single select"
@@ -60,3 +60,4 @@ export default () => (
     styles={colourStyles}
   />
 );
+export default select;

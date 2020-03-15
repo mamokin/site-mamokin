@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { navigate, StaticQuery } from 'gatsby';
-import PropTypes from "prop-types"
+import PropTypes from 'prop-types';
 
 import config from '../../config';
-const pic = require('../assets/img/Mamokin.png');
+import pic from '../assets/img/Mamokin.png';
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
@@ -43,14 +43,14 @@ const Header = ({ data }) => {
       );
 
       if (/^\/+\w+$/.test(link.link)) passedRegex.push(generic);
-    })
+    });
 
     passedRegex.forEach((linkDiv, i, arr) => {
       arr.length - 1 !== i ? newLinks.push(<>{linkDiv} | </>) : newLinks.push(linkDiv);
-    })
+    });
 
     setLinks(newLinks);
-  }, [data])
+  }, [data]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -58,7 +58,8 @@ const Header = ({ data }) => {
 
       if (words[i]) {
         setWord(words[i]);
-        setIndex(index => i)
+        // eslint-disable-next-line no-unused-vars
+        setIndex(index => i);
       } else {
         setWord(words[0]);
         setIndex(0);
@@ -83,11 +84,14 @@ const Header = ({ data }) => {
       </span></h3>
       <p>{config.heading}</p>
     </header>
-  )
-}
+  );
+};
 
+// eslint-disable-next-line react/display-name
 export default props => (
   <StaticQuery
+    // is global but deprecated
+    // eslint-disable-next-line no-undef
     query={graphql`
       query SiteMetaData {
         site {
@@ -102,7 +106,7 @@ export default props => (
     `}
     render={data => <Header data={data}{...props} />}
   />
-)
+);
 
 Header.propTypes = {
   data: PropTypes.shape({
@@ -112,6 +116,6 @@ Header.propTypes = {
       }).isRequired,
     }).isRequired,
   }).isRequired,
-}
+};
 
 // export const query = ;

@@ -1,8 +1,8 @@
 import React from 'react';
 
 // import AnimatedBg from '../../components/AnimatedBg';
-import Encode from '../../components/Encode'
-import Decode from '../../components/Decode'
+import Encode from '../../components/Encode';
+import Decode from '../../components/Decode';
 
 export default function EncodeDecode() {
   return (
@@ -18,5 +18,5 @@ export default function EncodeDecode() {
         </div>
       </div>
     </div>
-  )
+  );
 }

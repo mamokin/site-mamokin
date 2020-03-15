@@ -1,5 +1,5 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ThemeContext from '../Util/Provider';
 
 const ThemeToggle = () => {
@@ -16,6 +16,6 @@ const ThemeToggle = () => {
       )}
     </ThemeContext.Consumer>
   );
-}
+};
 
 export default ThemeToggle;
