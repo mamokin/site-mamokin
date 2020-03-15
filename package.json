@@ -29,7 +29,7 @@
     "gatsby-plugin-sass": "^2.0.11",
     "highlight.js": "^9.18.1",
     "lodash": "^4.17.15",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -51,10 +51,17 @@
     "browserifyNodeCrypto": "browserify ./src/services/getNodeCrypto.js > ./src/services/NodeCryptoBundled.js"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.1.0",
     "gh-pages": "^2.0.1",
+    "husky": "^4.2.3",
     "prettier": "^1.17.0",
     "react-hook-form": "^4.10.1",
-    "rimraf": "^2.6.3"
+    "rimraf": "^2.6.3",
+    "standard-version": "^7.1.0",
+    "undefined": "^0.1.0"
   },
   "keywords": [
     "gatsby",
@@ -65,5 +72,10 @@
   "bugs": {
     "url": "https://github.com/mamokin/mamokin/issues"
   },
-  "homepage": "https://github.com/mamokin/mamokin#readme"
+  "homepage": "https://github.com/mamokin/mamokin#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
