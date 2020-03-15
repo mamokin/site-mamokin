@@ -56,6 +56,10 @@
       flex-wrap: wrap;
       margin: auto;
       justify-content: space-between;
+      
+      img {
+        max-width: 300px;
+      }
 
       .tooltip span.left {
         width: 190px;
