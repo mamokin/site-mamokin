@@ -1,6 +1,7 @@
 import React from 'react';
 import wallet from '../assets/img/logo_ppy-wallet.png';
 import bookie from '../assets/img/logo_ppy-bookie.png';
+import se from '../assets/img/logo_se--stacked.png';
 import scatter from '../assets/img/logo_scatter.png';
 
 const Card = props => {
@@ -76,24 +77,39 @@ const About = () => {
               href="https://github.com/peerplays-network/peerplays-core-gui/releases/latest"
               alt="Peerplays Core GUI"
               target="_blank"
+              rel="noopener noreferrer"
               tabIndex="0"
             >
               <img src={wallet} alt="Peerplays Core GUI" />
             </a>
+
             <a
               href="https://bookiepro.com/download"
               alt="Bookie Pro"
               target="_blank"
+              rel="noopener noreferrer"
               tabIndex="0"
             >
               <img src={bookie} alt="Bookie Pro" />
             </a>
+
+            <a
+              href="https://streamersedge.com/"
+              alt="StreamersEdge"
+              target="_blank"
+              rel="noopener noreferrer"
+              tabIndex="0"
+            >
+              <img src={se} alt="StreamersEdge" />
+            </a>
+
             <a
               href="https://www.get-scatter.com/"
               alt="GetScatter"
-              target="_blank"
-              tabIndex="0"
               className="tooltip"
+              target="_blank"
+              rel="noopener noreferrer"
+              tabIndex="0"
             >
               <img src={scatter} alt="GetScatter" />
               <span className="top left">Peerplays plugin</span>
