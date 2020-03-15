@@ -8,8 +8,8 @@ export default function PageFooter() {
         <li>&copy; {config.authorName} | </li>
         <li>
           Designed with <a href="http://html5up.net">HTML5 UP</a>
-                </li>
-            </ul>
-        </footer>
-    );
+        </li>
+      </ul>
+    </footer>
+  );
 }
