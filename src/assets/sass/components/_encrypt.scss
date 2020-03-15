@@ -6,16 +6,17 @@
   }
 
   ol li {
-    text-indent: 1em;
     list-style-position: inside;
+    text-indent: 1em;
   }
 
   &__form {
-    margin-bottom: 2em;
+    margin-bottom: 2em; /* stylelint-disable-line declaration-property-unit-whitelist */
   }
 
   &__result {
     margin-bottom: 0;
+
     .stdout {
       @include themify() {
         color: themed('fadedCardTxtHover');
@@ -40,14 +41,15 @@
           content: 'Decrypted: ';
           font-weight: 700;
         }
+
         margin-bottom: 0;
       }
     }
   }
 
   &__btn-submit {
+    height: 48px !important; /* stylelint-disable-line declaration-no-important */
     margin-bottom: 10px;
-    height: 48px !important;
   }
 
   .card {

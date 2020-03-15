@@ -49,17 +49,17 @@
   @include icon($content);
   $size: _size(border-width) * 1.25;
 
-  &:before {
+  &::before {
     color: _palette(bg);
-    text-shadow: $size 0px 0px _palette(border), ($size * -1) 0px 0px _palette(border), 0px $size 0px _palette(border),
-      0px ($size * -1) 0px _palette(border);
+    text-shadow:
+ $size 0 0 _palette(border),($size * -1) 0 0 _palette(border),0 $size 0 _palette(border),0 ($size * -1) 0 _palette(border);
   }
 
   @if $link {
     &:hover {
-      &:before {
-        text-shadow: $size 0px 0px _palette(highlight), ($size * -1) 0px 0px _palette(highlight),
-          0px $size 0px _palette(highlight), 0px ($size * -1) 0px _palette(highlight);
+      &::before {
+        text-shadow:
+ $size 0 0 _palette(highlight),($size * -1) 0 0 _palette(highlight),0 $size 0 _palette(highlight),0 ($size * -1) 0 _palette(highlight);
       }
     }
   }

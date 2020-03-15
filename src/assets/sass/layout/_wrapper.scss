@@ -12,12 +12,13 @@
   // @include vendor('justify-content', 'space-between');
   @include vendor('flex-direction', 'column');
   @include vendor('perspective', '1000px');
+
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
   // overflow: inherit;
   max-height: 100%;
-  position: relative;
-  min-height: 100vh;
   padding: _size(element-margin);
-  z-index: 2;
   padding-top: 0;
   padding-bottom: 0;
 
@@ -25,7 +26,7 @@
     z-index: 1;
   }
 
-  &:before {
+  &::before {
     content: '';
     display: block;
   }

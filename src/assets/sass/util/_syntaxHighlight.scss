@@ -1,6 +1,25 @@
-pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
-.string { color: green; }
-.number { color: darkorange; }
-.boolean { color: blue; }
-.null { color: magenta; }
-.key { color: red; }
+pre {
+  margin: 5px;
+  padding: 5px;
+  outline: 1px solid rgb(204, 204, 204);
+}
+
+.string {
+  color: rgb(0, 128, 0);
+}
+
+.number {
+  color: rgb(255, 140, 0);
+}
+
+.boolean {
+  color: rgb(0, 0, 255);
+}
+
+.null {
+  color: rgb(255, 0, 255);
+}
+
+.key {
+  color: rgb(255, 0, 0);
+}

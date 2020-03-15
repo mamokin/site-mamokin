@@ -21,8 +21,8 @@ html {
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
   word-break: break-word;
 }
@@ -32,8 +32,8 @@ body,
   // Stops initial animations until page loads.
   &.is-preload {
     *,
-    *:before,
-    *:after {
+    *::before,
+    *::after {
       @include vendor('animation', 'none !important');
       @include vendor('transition', 'none !important');
     }
@@ -75,14 +75,14 @@ html {
 @include keyframes(animate) {
   0% {
     transform: translateY(0) rotate(0deg);
-    opacity: 1;
     border-radius: 0;
+    opacity: 1;
   }
 
   100% {
     transform: translateY(-1000px) rotate(720deg);
-    opacity: 0;
     border-radius: 50%;
+    opacity: 0;
   }
 }
 
@@ -105,8 +105,8 @@ html {
     }
   }
 
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .main-body {
@@ -117,21 +117,25 @@ html {
 
   height: 100%;
   min-height: 100vh;
-  overflow: visible;
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
+  overflow: visible;
 
-  &:after {
+  &::after {
     content: '';
     display: block;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
     width: 100%;
     height: inherit;
-    opacity: 0;
-    z-index: 1;
     background-color: _palette(border-dark);
+    background-position: top left, center center;
+    background-repeat: repeat, no-repeat;
+    background-size: 100px 100px, cover;
+    opacity: 0;
+
     @include vendor(
       'background-image',
       (
@@ -139,15 +143,11 @@ html {
         'linear-gradient(60deg, #{transparentize(_palette(accent1), 0.5)} 5%, #{transparentize(_palette(accent2), 0.65)})'
       )
     );
-    background-repeat: repeat, no-repeat;
-    background-size: 100px 100px, cover;
-    background-position: top left, center center;
-
     @include vendor('transition', 'opacity #{_duration(bg)} ease-out');
   }
 
   &.is-preload {
-    &:after {
+    &::after {
       opacity: 1;
     }
   }
@@ -163,6 +163,7 @@ html {
     display: flex;
     flex-grow: 1;
   }
+
   &--block {
     display: block;
     width: 100%;
@@ -175,8 +176,8 @@ html {
 }
 
 .scroll-content {
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
 }
 
 .full-block {

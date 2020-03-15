@@ -8,18 +8,20 @@
 
 ul.actions {
   @include vendor('display', 'flex');
-  cursor: default;
-  list-style: none;
+
   margin-left: (_size(element-margin) * -0.5);
   padding-left: 0;
+  list-style: none;
+  cursor: default;
 
   li {
-    padding: 0 0 0 (_size(element-margin) * 0.5);
     vertical-align: middle;
+    padding: 0 0 0 (_size(element-margin) * 0.5);
   }
 
   &.special {
     @include vendor('justify-content', 'center');
+
     width: 100%;
     margin-left: 0;
 
@@ -32,6 +34,7 @@ ul.actions {
 
   &.stacked {
     @include vendor('flex-direction', 'column');
+
     margin-left: 0;
 
     li {
@@ -49,6 +52,7 @@ ul.actions {
     li {
       @include vendor('flex-grow', '1');
       @include vendor('flex-shrink', '1');
+
       width: 100%;
 
       > * {
@@ -64,15 +68,17 @@ ul.actions {
   @include breakpoint('<=xsmall') {
     &:not(.fixed) {
       @include vendor('flex-direction', 'column');
+
+      width: 100% !important; /* stylelint-disable-line declaration-no-important */
       margin-left: 0;
-      width: 100% !important;
 
       li {
         @include vendor('flex-grow', '1');
         @include vendor('flex-shrink', '1');
+
+        width: 100%;
         padding: (_size(element-margin) * 0.5) 0 0 0;
         text-align: center;
-        width: 100%;
 
         > * {
           width: 100%;
@@ -90,8 +96,8 @@ ul.actions {
           width: 100%;
 
           &.icon {
-            &:before {
-              margin-left: -0.5rem;
+            &::before {
+              margin-left: -0.5rem; /* stylelint-disable-line declaration-property-unit-whitelist */
             }
           }
         }

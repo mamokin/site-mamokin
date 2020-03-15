@@ -29,26 +29,28 @@ button,
       'color #{_duration(transition)} ease-in-out'
     )
   );
+
   display: inline-block;
   height: _size(element-height);
-  line-height: _size(element-height);
   padding: 0 1.5em;
-  background-color: transparent;
   border-radius: _size(border-radius);
-  @include themify() {
-    border: solid 1px themed('border');
-    color: themed('border') !important;
-  }
-  cursor: pointer;
+  line-height: _size(element-height);
   text-align: center;
   text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
   white-space: nowrap;
+
+  @include themify() {
+    border: solid 1px themed('border');
+    color: themed('border') !important; /* stylelint-disable-line declaration-no-important */
+  }
 
   &.icon {
     padding-left: 1.35em;
 
-    &:before {
-      margin-right: 0.5em;
+    &::before {
+      margin-right: 0.5em; /* stylelint-disable-line declaration-property-unit-whitelist */
     }
   }
 
@@ -67,6 +69,7 @@ button,
   &.disabled,
   &:disabled {
     @include vendor('pointer-events', 'none');
+
     opacity: 0.5;
   }
 }
@@ -76,29 +79,31 @@ button {
   border-color: _palette(stickyBtns);
 
   &:hover {
+    color: _palette(highlight) !important; /* stylelint-disable-line declaration-no-important */
     border-color: _palette(highlight);
-    color: _palette(highlight) !important;
   }
 }
 
 .btn {
   &__theme-toggle,
   &__back {
+    position: absolute;
+    top: 0;
+    z-index: 5;
     width: 37px;
     height: 37px;
-    padding: 0.3em !important;
-    top: 0;
-    position: absolute;
-    z-index: 5;
+    padding: 0.3em !important; /* stylelint-disable-line declaration-no-important */
   }
+
   &__theme-toggle {
-    pointer-events: all;
-    margin: 20px 20px 0 0;
     right: 0;
-  }
-  &__back {
+    margin: 20px 20px 0 0;
     pointer-events: all;
-    margin: 20px 0 0 20px;
+  }
+
+  &__back {
     left: 0;
+    margin: 20px 0 0 20px;
+    pointer-events: all;
   }
 }
