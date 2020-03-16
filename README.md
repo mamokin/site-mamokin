@@ -1,5 +1,10 @@
 # Mamok.in
 
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) 
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+
+![Discord](https://img.shields.io/discord/371717905332830208?label=Discord&style=for-the-badge) ![Keybase XLM](https://img.shields.io/keybase/xlm/mamokin)
+
 Welcome to the open source code for https://mamok.in!
 
 This website is built using [Gatsby](https://www.gatsbyjs.com/)
