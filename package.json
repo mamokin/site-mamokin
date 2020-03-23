@@ -49,6 +49,7 @@
     "format": "prettier --write '**/*.js'",
     "eslint": "node_modules/.bin/eslint src/**/*.{js,jsx} --fix",
     "stylelint": "stylelint **/*.scss --fix",
+    "get-next-version": "node ./get-next-version.js",
     "release": "standard-version",
     "test": "echo \"Error: no test specified\" && exit 1",
     "browserifyNodeCrypto": "browserify ./src/services/getNodeCrypto.js > ./src/services/NodeCryptoBundled.js"
