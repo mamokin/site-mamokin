@@ -66,7 +66,7 @@
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8",
     "prettier": "^1.17.0",
-    "react-hook-form": "^4.10.1",
+    "react-hook-form": "^5.7.1",
     "rimraf": "^2.6.3",
     "standard-version": "^7.1.0",
     "stylelint": "^13.2.1",
