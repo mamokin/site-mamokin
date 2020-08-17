@@ -68,7 +68,7 @@
     "prettier": "^1.17.0",
     "react-hook-form": "^4.10.1",
     "rimraf": "^2.6.3",
-    "standard-version": "^7.1.0",
+    "standard-version": "^9.0.0",
     "stylelint": "^13.2.1",
     "stylelint-order": "^4.0.0",
     "undefined": "^0.1.0"
