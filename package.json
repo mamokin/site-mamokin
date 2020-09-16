@@ -65,7 +65,7 @@
     "gh-pages": "^2.0.1",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8",
-    "prettier": "^1.17.0",
+    "prettier": "^2.1.2",
     "react-hook-form": "^4.10.1",
     "rimraf": "^2.6.3",
     "standard-version": "^7.1.0",
