@@ -27,7 +27,7 @@
     "gatsby-plugin-offline": "^2.1.0",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sass": "^2.0.11",
-    "highlight.js": "^9.18.1",
+    "highlight.js": "^10.4.1",
     "lodash": "^4.17.15",
     "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
