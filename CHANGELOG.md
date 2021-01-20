@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.2](https://github.com/mamokin/mamokin/compare/v0.5.0...v0.5.2) (2021-01-20)
+
+
+### Features
+
+* changeout history with current HOW ([73521f1](https://github.com/mamokin/mamokin/commit/73521f1127511401f7b286b3bb42f1980811da32))
+* **keno:** added keno demo app ([8830978](https://github.com/mamokin/mamokin/commit/8830978e935318f0f89e081dca6f275dc632ce84))
+
 ### [0.5.1](https://github.com/mamokin/mamokin/compare/v0.5.0...v0.5.1) (2020-03-23)
 
 
