@@ -1,0 +1,18 @@
+/*!
+ * Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+
+/*!
+ * cast `I.Scrollbar` to `Scrollbar` to avoid error
+ *
+ * `I.Scrollbar` is not assignable to `Scrollbar`:
+ *     "privateProp" is missing in `I.Scrollbar`
+ *
+ * @see https://github.com/Microsoft/TypeScript/issues/2672
+ */
+
+/*!
+ * domready (c) Dustin Diaz 2014 - License MIT
+ * ie10 fix - Mikael Kristiansson 2019
+ */
