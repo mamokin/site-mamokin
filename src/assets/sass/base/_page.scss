@@ -194,3 +194,7 @@ html {
     height: 100vh;
   }
 }
+
+.invert {
+  filter: invert(100%);
+}

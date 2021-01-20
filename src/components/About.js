@@ -1,8 +1,7 @@
 import React from 'react';
 import wallet from '../assets/img/logo_ppy-wallet.png';
 import bookie from '../assets/img/logo_ppy-bookie.png';
-import se from '../assets/img/logo_se--stacked.png';
-import scatter from '../assets/img/logo_scatter.png';
+import how from '../assets/img/HOW_white-full-logo.png';
 
 const Card = props => {
   // eslint-disable-next-line react/prop-types
@@ -74,7 +73,7 @@ const About = () => {
           <Card children={content.developer} />
         </div>
         <div className="about__projects">
-          <h1>Projects that I have worked on</h1>
+          <h1>History</h1>
           <div className="about__projects logos">
             <a
               href="https://github.com/peerplays-network/peerplays-core-gui/releases/latest"
@@ -97,25 +96,15 @@ const About = () => {
             </a>
 
             <a
-              href="https://streamersedge.com/"
-              alt="StreamersEdge"
-              target="_blank"
-              rel="noopener noreferrer"
-              tabIndex="0"
-            >
-              <img src={se} alt="StreamersEdge" />
-            </a>
-
-            <a
-              href="https://www.get-scatter.com/"
-              alt="GetScatter"
+              href="https://www.healthoutcomesww.com/"
+              alt="Health Outcomes Worldwide"
               className="tooltip"
               target="_blank"
               rel="noopener noreferrer"
               tabIndex="0"
             >
-              <img src={scatter} alt="GetScatter" />
-              <span className="top left">Peerplays plugin</span>
+              <img src={how} alt="HOW" className="invert"/>
+              <span className="top left">Software That Improves Health Outcomes</span>
             </a>
           </div>
         </div>
