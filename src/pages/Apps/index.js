@@ -23,6 +23,15 @@ const Apps = () => {
       >
         <p>Asymmetrical Encryption</p>
       </div>
+      <div
+        className='link__card--b'
+        role='link'
+        tabIndex={0}
+        onClick={() => { navigate('/Apps/ChanceKeno'); }}
+        onKeyPress={() => { navigate('/Apps/ChanceKeno'); }}
+      >
+        <p>Simple Keno Lottery Game</p>
+      </div>
     </>
   );
 };

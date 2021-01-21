@@ -31,7 +31,7 @@ module.exports = {
     'font-size': ['px', 'em', 'rem', 'pt'],
     font: ['px'],
     height: ['px', '%', 'vw', 'vh'],
-    'line-height': [],
+    'line-height': ['em'],
     margin: ['px'],
     'margin-top': ['px'],
     'margin-right': ['px'],

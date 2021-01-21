@@ -1,0 +1,126 @@
+.board {
+  display: flex;
+  flex-flow: column;
+  padding: 20px;
+
+  .row {
+    display: flex;
+    justify-content: center;
+    width: 20em;
+    margin: auto;
+
+    &:nth-child(4) {
+      // allow, card is made from text content to build graphical card
+      margin-bottom: 2em; /* stylelint-disable-line declaration-property-unit-whitelist */
+    }
+
+    &:nth-child(4), &:nth-child(8) {
+      border-bottom: solid 1px black;
+    }
+
+    .col {
+      width: 2em;
+      border-top: solid 1px black;
+      border-right: solid 1px black;
+      line-height: 2em;
+      text-align: center;
+
+      &:nth-child(1) {
+        border-left: solid 1px black;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .picked {
+    & span {
+      display: none;
+    }
+
+    &::after {
+      content: '🗙';
+      font-weight: 700;
+      color: green;
+    }
+
+    &:hover {
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+  }
+
+  &.disabled {
+    *:hover {
+      cursor: default;
+    }
+
+    .row {
+      background: rgba(255, 0, 98, 0.11);
+      pointer-events: none;
+    }
+  }
+}
+
+.numbers,
+.board,
+.options,
+.quik-pik {
+  // allow, card is made from text content to build graphical card
+  margin: 1em; /* stylelint-disable-line declaration-property-unit-whitelist */
+}
+
+.quik-pik {
+  display: flex;
+  flex-direction: column;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  // allow, card is made from text content to build graphical card
+  margin-bottom: 1em; /* stylelint-disable-line declaration-property-unit-whitelist */
+  text-align: left;
+}
+
+.keno {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px auto;
+  border-radius: 1em;
+
+  @include themify() {
+    font-weight: 700 !important; /* stylelint-disable-line declaration-no-important */
+    color: themed('txtInvert');
+    background: themed('cardBg');
+    text-shadow: none;
+
+    p,
+    li,
+    span, label {
+      color: themed('cardTxt');
+    }
+  }
+}
+
+.numbers {
+  width: 300px;
+
+  &__your, &__matching {
+    display: block;
+    float: left;
+    width: 300px;
+  }
+}
+
+.submit {
+  &__card, &__quick-pick {
+    // allow, card is made from text content to build graphical card
+    margin-top: 1em; /* stylelint-disable-line declaration-property-unit-whitelist */
+    cursor: pointer;
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "mamokin",
-  "version": "0.5.0",
+  "version": "0.5.2",
   "description": "Mamokin Identity [ Gatsby.js V2 starter template based on Identity by HTML5 UP ]",
   "repository": {
     "type": "git",
@@ -49,6 +49,7 @@
     "format": "prettier --write '**/*.js'",
     "eslint": "node_modules/.bin/eslint src/**/*.{js,jsx} --fix",
     "stylelint": "stylelint **/*.scss --fix",
+    "get-next-version": "node ./get-next-version.js",
     "release": "standard-version",
     "test": "echo \"Error: no test specified\" && exit 1",
     "browserifyNodeCrypto": "browserify ./src/services/getNodeCrypto.js > ./src/services/NodeCryptoBundled.js"
@@ -95,6 +96,11 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "standard-version": {
+    "skip": {
+      "tag": true
     }
   }
 }
