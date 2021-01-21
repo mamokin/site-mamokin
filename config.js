@@ -1,6 +1,6 @@
 module.exports = {
   siteTitle: 'Mamokin', // <title>
-  description: 'Full-stack Blockchain Developer. Demo applications, guides, portfolio, consultations.',
+  description: 'Full-stack Developer. Demo applications, guides, portfolio, consultations.',
   keywords: 'site, web, frontend developer, developer, gatsby, react',
   image: '/Mamokin.png',
   canonical: 'https://mamok.in/',
