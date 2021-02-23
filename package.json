@@ -55,7 +55,7 @@
     "browserifyNodeCrypto": "browserify ./src/services/getNodeCrypto.js > ./src/services/NodeCryptoBundled.js"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
+    "@commitlint/cli": "^12.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "^3.1.0",
