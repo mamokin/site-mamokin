@@ -34,7 +34,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^6.1.0",
-    "react-select": "^3.0.8",
+    "react-select": "^4.2.0",
     "sha.js": "^2.4.11",
     "smooth-scrollbar": "^8.5.1",
     "tweetnacl": "^1.0.3",
