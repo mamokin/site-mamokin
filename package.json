@@ -22,7 +22,7 @@
     "chance": "^1.1.4",
     "chroma-js": "^2.1.0",
     "crc": "^3.8.0",
-    "gatsby": "^2.4.3",
+    "gatsby": "^3.3.1",
     "gatsby-plugin-manifest": "^2.1.1",
     "gatsby-plugin-offline": "^3.9.0",
     "gatsby-plugin-react-helmet": "^3.0.12",
